@@ -5,11 +5,10 @@ import javax.persistence.Table;
 
 import org.hibernate.Session;
 
+
 @Entity
 @Table(name ="BOOK ARCHIVE")
 public class Books {
-	
-	Session session;
 	
 	@Id
 	int bid;
@@ -17,11 +16,12 @@ public class Books {
 	String author;
 	int field;
 	
-	
-	
+
 	public int getBid() {
 		return bid;
 	}
+
+
 
 
 	public void setBid(int bid) {
@@ -29,14 +29,6 @@ public class Books {
 	}
 
 
-	public Session getSession() {
-		return session;
-	}
-
-
-	public void setSession(Session session) {
-		this.session = session;
-	}
 
 
 	public String getTitle() {
@@ -44,9 +36,13 @@ public class Books {
 	}
 
 
+
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
+
 
 
 	public String getAuthor() {
@@ -54,14 +50,20 @@ public class Books {
 	}
 
 
+
+
 	public void setAuthor(String author) {
 		this.author = author;
 	}
 
 
+
+
 	public int getField() {
 		return field;
 	}
+
+
 
 
 	public void setField(int field) {
@@ -70,10 +72,14 @@ public class Books {
 
 
 
+
 	@Override
 	public String toString() {
-		return "Books [session=" + session + ", title=" + title + ", author=" + author + ", field=" + field + "]";
+		return "Books [bid=" + bid + ", title=" + title + ", author=" + author + ", field=" + field + "]";
 	}
+
+
+
 	
 	
 
