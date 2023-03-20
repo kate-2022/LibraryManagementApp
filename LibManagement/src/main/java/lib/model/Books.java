@@ -11,10 +11,11 @@ public class Books {
 	
 	Session session;
 	
+	@Id
+	int bid;
 	String title;
 	String author;
 	int field;
-	int bid;
 	
 	
 	
