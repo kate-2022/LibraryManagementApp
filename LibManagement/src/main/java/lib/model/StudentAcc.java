@@ -3,14 +3,17 @@ package lib.model;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="STUDENTS")
 public class StudentAcc {
 	
+	@Id
+	Integer libId;
 	Integer enrollmentNo;
 	String firstName;
 	String lastName;
-	Integer libId;
+	
 	
 
 	public Integer getEnrollmentNo() {
