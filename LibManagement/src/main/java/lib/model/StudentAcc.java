@@ -1,8 +1,10 @@
 package lib.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="STUDENTS")
@@ -12,6 +14,7 @@ public class StudentAcc {
 	Integer libId;
 	Integer enrollmentNo;
 	String firstName;
+	Date doB;
 	String lastName;
 	
 	
