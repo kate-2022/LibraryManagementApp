@@ -7,7 +7,7 @@
 <title>Library Registration</title>
 </head>
 <body bgcolor="lightgreen">
-<center>
+
    <h1 style="color: blue; text-align:center;"> Student Registration </h1>
   	 <form align='center'>
   	 	<font color="blue" size="4"></font>
@@ -24,6 +24,6 @@
    	        <input type="submit" /><br/>
 		</font>
    	</form>
-   </center>
+
 </body>
 </html>
