@@ -29,10 +29,7 @@
   	 	  	<td> First name </td>
   	 	  	<td> <input type="text" name="firstName"/> </td>
   	 	  </tr>
-  	 	        <tr>
-  	 	  	<td> Date of birth </td>
-  	 	  	<td> <input type="text" name="dob"/> </td>
-  	 	  </tr>
+  	 	 
 		
 		</table>
 
@@ -45,7 +42,7 @@
    		<label for="firstName">Enter first name</label>
    			<input type="text" placeholder= "first name" name= "firstName" required/><br/><br/>
    			-->
-   			  <center>
+   		<center>
    		<label for="doB">Enter date of birth</label>
    			<input type="date" required/><br/><br/>
  
