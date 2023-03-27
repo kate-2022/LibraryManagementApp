@@ -10,7 +10,7 @@ import lib.model.StudentAcc;
 
 public class StudentPersistApp {
 
-	public static void main(String[] args)  {
+	public static void main(String[] args) throws Exception {
 	
 		Session session = null;
 		SessionFactory sessionfactory = null;
