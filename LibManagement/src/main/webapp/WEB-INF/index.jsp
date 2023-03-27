@@ -44,9 +44,11 @@
    			<input type="text" placeholder= "last name" name= "lastName" required/><br/>
    		<label for="firstName">Enter first name</label>
    			<input type="text" placeholder= "first name" name= "firstName" required/><br/><br/>
+   			-->
+   			  <center>
    		<label for="doB">Enter date of birth</label>
    			<input type="date" required/><br/><br/>
-   	--> <center>
+ 
    	     <label for="female">Female</label>
    	    	  <input type="radio" value="female" name="gender"/> 
    	      <label for="male">Male</label>
