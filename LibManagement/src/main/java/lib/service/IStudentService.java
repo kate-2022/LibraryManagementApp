@@ -1,12 +1,12 @@
 package lib.service;
 
-import lib.model.StudentAcc;
+import lib.model.Student;
 
 public interface IStudentService {
 	
-	public String addStudent(StudentAcc studAcc);
+	public String addStudent(Student studAcc);
 	
-	public String  searchStudent(Integer libId);
+	public Student  searchStudent(Integer libId);
 	
 	public String  deleteStudent(Integer libId);
 

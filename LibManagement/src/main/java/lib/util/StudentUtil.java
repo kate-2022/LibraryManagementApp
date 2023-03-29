@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import lib.model.StudentAcc;
+import lib.model.Student;
 
 public class StudentUtil {
 
@@ -14,7 +14,7 @@ public class StudentUtil {
 	
 	static {
 		 sessionfactory = new Configuration().configure().
-				 addAnnotatedClass(StudentAcc.class).
+				 addAnnotatedClass(Student.class).
 				 buildSessionFactory();
 	}
 	

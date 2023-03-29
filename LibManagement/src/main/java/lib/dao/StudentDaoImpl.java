@@ -3,7 +3,7 @@ package lib.dao;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import lib.model.StudentAcc;
+import lib.model.Student;
 import lib.util.HibernateUtil;
 
 
@@ -13,16 +13,17 @@ public class StudentDaoImpl implements IStudentDao{
 	Session session = HibernateUtil.getSession();
 
 	@SuppressWarnings("finally")
-	public String addStudent(StudentAcc studAcc) {
+	public String addStudent(Student studAcc) {
 		System.out.println(studAcc);
 		
 		Transaction transaction = null;
 		Boolean flag = false;
 		
 		try {
-		transaction = session.beginTransaction();
-		session.save(studAcc);
-		flag=true;
+			transaction = session.beginTransaction();
+			session.save(studAcc);
+			flag=true;
+			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
@@ -37,8 +38,8 @@ public class StudentDaoImpl implements IStudentDao{
 	}
 	
 	
-	public StudentAcc searchStudent(Integer libId) {
-		return session.get(StudentAcc.class, libId);	
+	public Student searchStudent(Integer libId) {
+		return session.get(Student.class, libId);	
 	}
 
 
@@ -46,7 +47,7 @@ public class StudentDaoImpl implements IStudentDao{
 	public String deleteStudent(Integer libId) {
 		Transaction transaction = null;
 		Boolean flag = false;	
-		StudentAcc studAcc = searchStudent(libId);
+		Student studAcc = searchStudent(libId);
 		if(studAcc != null) {
 			
 			try {

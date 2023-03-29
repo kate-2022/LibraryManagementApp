@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import lib.util.StudentUtil;
-import lib.model.StudentAcc;
+import lib.model.Student;
 
 public class StudentPersistApp {
 
@@ -24,7 +24,7 @@ public class StudentPersistApp {
 				transaction = session.beginTransaction();
 			if (transaction != null) {
 				
-				StudentAcc student = new StudentAcc();
+				Student student = new Student();
 				student.setEnrollmentNo(012345);
 				student.setLastName("Fine");
 				student.setFirstName("Fran");

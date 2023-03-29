@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import lib.StudentServiceFactory.StudentServiceFactory;
+import lib.model.Student;
 import lib.service.IStudentService;
 import lib.util.HibernateUtil;
 
@@ -45,6 +46,13 @@ public class ControllerServlet extends HttpServlet {
 			String firstName = request.getParameter("firstName");
 			Long dob = Date.parse(request.getParameter("doB"));
 			
+			Student student = new Student();
+			student.setEnrollmentNo(enrollNo);
+			student.setLastName(lastName);
+			student.setFirstName(firstName);
+			student.setDoB(null);
+			
+			String status = stdService.addStudent(student);
 			
 			//...
 			

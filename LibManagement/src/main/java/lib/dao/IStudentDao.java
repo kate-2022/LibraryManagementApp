@@ -1,12 +1,12 @@
 package lib.dao;
 
-import lib.model.StudentAcc;
+import lib.model.Student;
 
 public interface IStudentDao {
 
-	public String addStudent(StudentAcc studAcc);
+	public String addStudent(Student studAcc);
 	
-	public StudentAcc  searchStudent(Integer libId);
+	public Student  searchStudent(Integer libId);
 	
 	public String  deleteStudent(Integer libId);
 }

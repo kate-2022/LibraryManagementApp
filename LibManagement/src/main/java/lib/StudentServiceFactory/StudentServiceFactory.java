@@ -1,21 +1,20 @@
 package lib.StudentServiceFactory;
 
+import lib.dao.IStudentDao;
 import lib.service.IStudentService;
 import lib.service.StudentServiceImpl;
 
 public class StudentServiceFactory {
 	
-	private StudentServiceFactory() {
-		
-	}
+	private static IStudentService studentService;
 	
-	private static IStudentService studentservice;
+	private StudentServiceFactory() {}
 	
 	public static IStudentService getStudentService() {
-		if(studentservice == null) {
-			studentservice = new StudentServiceImpl();
+		if(studentService == null) {
+			studentService = new StudentServiceImpl();
 		}
-		return studentservice;
+		return studentService;
 		
 	}
 
