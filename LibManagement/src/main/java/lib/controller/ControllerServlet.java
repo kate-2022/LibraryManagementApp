@@ -33,7 +33,7 @@ public class ControllerServlet extends HttpServlet {
 		doProcess(request, response);
 	}
 
-	private void doProcess(HttpServletRequest request, HttpServletResponse response){
+	private void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		
 		IStudentService stdService = StudentServiceFactory.getStudentService();
 		
@@ -41,6 +41,7 @@ public class ControllerServlet extends HttpServlet {
 		System.out.println("Path info : " + request.getPathInfo());
 		
 		if (request.getRequestURI().endsWith("register")) {
+			
 			Integer enrollNo = Integer.parseInt(request.getParameter("enrollmentNo"));
 			String lastName = request.getParameter("lastName");
 			String firstName = request.getParameter("firstName");
@@ -53,6 +54,11 @@ public class ControllerServlet extends HttpServlet {
 			student.setDoB(null);
 			
 			String status = stdService.addStudent(student);
+			RequestDispatcher rd = null;
+			
+			request.setAttribute("status", status);
+			rd = request.getRequestDispatcher("../registerResult.jsp");
+			rd.forward(request, response);
 			
 			//...
 			
