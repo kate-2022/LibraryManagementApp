@@ -1,3 +1,3 @@
 # LibraryManagementApp
 
-This project is part of an ongoing internship.. lots of fun!! :)
+This project is part of an ongoing internship.. step by step ( when there is spare time..)
