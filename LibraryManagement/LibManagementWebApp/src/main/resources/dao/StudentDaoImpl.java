@@ -21,7 +21,7 @@ public class StudentDaoImpl implements IStudentDao{
 		
 		try {
 			transaction = session.beginTransaction();
-			session.save(studAcc);
+			session.persist(studAcc);
 			flag=true;
 			
 		}catch(Exception e) {
@@ -38,13 +38,14 @@ public class StudentDaoImpl implements IStudentDao{
 	}
 	
 	
-	public Student searchStudent(Integer libId) {
+	public Student searchStudent(Integer libId) {	
 		return session.get(Student.class, libId);	
 	}
 
 
 	@SuppressWarnings("finally")
 	public String deleteStudent(Integer libId) {
+		
 		Transaction transaction = null;
 		Boolean flag = false;	
 		Student studAcc = searchStudent(libId);
@@ -52,7 +53,7 @@ public class StudentDaoImpl implements IStudentDao{
 			
 			try {
 				transaction = session.beginTransaction();
-				session.delete(studAcc);
+				session.remove(studAcc);
 				flag = true;
 			} catch(Exception e) {
 				e.printStackTrace();

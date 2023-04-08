@@ -7,10 +7,16 @@ import org.hibernate.cfg.Configuration;
 public class HibernateUtil {
 	
 	private static SessionFactory sessionfactory = null;
+	//private static Configuration config = null;
 	private static Session session = null;
 	
+	
 	static {
-		sessionfactory = new Configuration().configure().buildSessionFactory();
+		sessionfactory = new Configuration().configure().annotatedClass(Books.class).buildSessionFactory();
+	}
+	
+	private HibernateUtil() {
+		
 	}
 
 	public static Session getSession() {

@@ -9,13 +9,11 @@ import lib.model.Student;
 public class StudentUtil {
 
 	private static SessionFactory sessionfactory = null;	
-	private static Configuration config= null;
+	//private static Configuration config= null;
 	private static Session session = null;
 	
 	static {
-		 sessionfactory = new Configuration().configure().
-				 addAnnotatedClass(Student.class).
-				 buildSessionFactory();
+		 sessionfactory = new Configuration().configure().addAnnotatedClass(Student.class).buildSessionFactory();
 	}
 	
 	private StudentUtil() {	
