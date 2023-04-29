@@ -6,7 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Controller;
 
+import ks.m5s.service.BookLendingManagement;
+
+@Controller
 @Configuration
 @ComponentScan(basePackages={ "ks" })
 public class LibraryControl {
@@ -15,5 +19,9 @@ public class LibraryControl {
 	public LocalDate getDate() {
 		return LocalDate.now();
 	}
+	
+	@Autowired
+	private BookLendingManagement bookOrganize; 
+	
 	
 }

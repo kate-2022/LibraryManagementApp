@@ -2,6 +2,7 @@ package ks.m5s.model;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,6 +34,7 @@ public class Student implements Serializable {
 	private Date doB;
 	private Integer libId;
 	private Integer noOfBooksLent;
+	private List<Books> listOfBooksLent;
 	
 	
 

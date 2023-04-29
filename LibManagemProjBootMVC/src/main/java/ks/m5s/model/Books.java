@@ -1,5 +1,7 @@
 package ks.m5s.model;
 
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,5 +25,7 @@ public class Books {
 	private String bookName;
 	private String authorLastName;
 	private String authorFirstName;
+	private Boolean bookAvailable;
+	private Date dateOfLoan;
 
 }
