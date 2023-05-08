@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 
-import ks.m5s.service.BookLendingManagement;
+import ks.m5s.service.BookLendingService;
 
 @Controller
 @Configuration
@@ -21,7 +21,7 @@ public class LibraryControl {
 	}
 	
 	@Autowired
-	private BookLendingManagement bookOrganize; 
+	private BookLendingService bookOrganize; 
 	
 	
 }

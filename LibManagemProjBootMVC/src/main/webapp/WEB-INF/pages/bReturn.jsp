@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>University Library Home</title>
+<title>Insert title here</title>
 </head>
-<body style="lightgreen">
+<body>
 
-		<jsp:forward page="choose"/>
-		
 </body>
 </html>
