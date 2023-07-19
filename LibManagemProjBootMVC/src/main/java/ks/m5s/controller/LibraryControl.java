@@ -7,12 +7,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import ks.m5s.service.BookLendingService;
+import ks.m5s.service.BookLendingServiceImpl;
 
 @Controller
-@Configuration
-@ComponentScan(basePackages={ "ks" })
+@RequestMapping("/lib")
 public class LibraryControl {
 
 	@Bean
@@ -21,7 +21,7 @@ public class LibraryControl {
 	}
 	
 	@Autowired
-	private BookLendingService bookOrganize; 
+	private BookLendingServiceImpl bookOrganize; 
 	
 	
 }
