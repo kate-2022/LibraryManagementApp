@@ -9,8 +9,11 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class LibManagemProjBootMvcApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext context = (ApplicationContext) SpringApplication.run(LibManagemProjBootMvcApplication.class, args);
-	       ((ConfigurableApplicationContext) context).close();
+		
+	            SpringApplication.run(LibManagemProjBootMvcApplication.class, args);
+	  
+//		ApplicationContext context = (ApplicationContext) SpringApplication.run(LibManagemProjBootMvcApplication.class, args);
+//	       ((ConfigurableApplicationContext) context).close();
 	
 	}
 

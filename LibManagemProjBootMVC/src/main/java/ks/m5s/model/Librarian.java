@@ -19,7 +19,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Component
 public class Librarian implements Serializable {
 
 	private static final long serialVersionUID = 1L;

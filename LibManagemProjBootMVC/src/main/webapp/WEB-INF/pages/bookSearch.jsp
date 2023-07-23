@@ -10,32 +10,33 @@
 <body> 
 	<center>
 		<h1 style = 'color:blue; text-align:center'>Book Search</h1>
-		<form:form method="GET" modelAttribute = "bookTrack">
+		<form:form method="POST" modelAttribute = "bookTrack">
 		
 		<table>
 				<tr>
-					<th>BOOK ID</th>
+					<th>Book ID</th>
 					<td><form:input path= 'bookId'/></td>
 				</tr>
 						<tr>
-					<th>BOOK ID</th>
+					<th>BookName</th>
 					<td><form:input path= 'bookName'/></td>
 				</tr>
 						<tr>
-					<th>BOOK ID</th>
+					<th>Author Last Name</th>
 					<td><form:input path= 'authorLastName'/></td>
 				</tr>
 						<tr>
-					<th>BOOK ID</th>
+					<th>Author First Name</th>
 					<td><form:input path= 'authorFirstName'/></td>
 				</tr>
 						<tr>
-					<th>BOOK ID</th>
-					<td><form:input path= 'yearOfPublish'/></td>
+					<th>Year of Publication</th>
+					<td><form:input path= 'yearOfPublication'/></td>
 				</tr>
-				
 					
-				
+						<td><input type="submit" value="submit"/></td>
+					
+
 				</table>
 		
 		

@@ -20,7 +20,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Component
 public class Books {
 	
 	LocalDateTime ldt = LocalDateTime.now();
@@ -31,14 +30,12 @@ public class Books {
 	private String bookName;
 	private String authorLastName;
 	private String authorFirstName;
-	private Date yearOfPublish;
-	private Boolean bookAvailable;
+	private Date yearOfPublication;
+	private Boolean bookOut;
 	private LocalDateTime dateOfLoan= ldt;
+	
 	private Integer libIdOfStudentLoan;
 	
-//	@Autowired
-//	BookStatus status;
-//	
 
 
 }

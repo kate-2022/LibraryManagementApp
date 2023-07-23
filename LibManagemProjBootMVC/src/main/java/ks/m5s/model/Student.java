@@ -2,7 +2,8 @@ package ks.m5s.model;
 
 import java.io.Serializable;
 import java.sql.Date;
-//import java.util.List;
+import java.util.ArrayList;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +12,6 @@ import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,24 +20,21 @@ import lombok.NoArgsConstructor;
 @Data
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
-@Component
 public class Student implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer studLibId;
 	private Integer enrolNo;
 	private String firstName;
 	private String lastName;
 	private Date doB;
-	private Integer studLibId;
 	private Integer noOfBooksOut;
-	// private List<BookCatalogue> listOfBooksLent;
-
 	private Date dateOfLoan;
 	
+	private ArrayList<Books> booksLoan;
 	
 
 }

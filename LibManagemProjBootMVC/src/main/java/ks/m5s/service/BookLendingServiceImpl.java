@@ -1,11 +1,10 @@
 package ks.m5s.service;
 
-import java.time.LocalDate;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import ks.m5s.dao.IBooksDao;
@@ -33,7 +32,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	@Override
 	public int bookCheckOut(Integer studLibId, Books bookOut) {
 		
-		boolean available = bookOut.getBookAvailable();
+		boolean available = bookOut.getBookOut();
 		if(available) {
 			noOfBooksOut = student.getNoOfBooksOut();
 			if (noOfBooksOut <3) {
