@@ -1,14 +1,18 @@
 package ks.m5s.service;
 
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ks.m5s.dao.IBooksDao;
 import ks.m5s.dao.IStudentDao;
+import ks.m5s.model.BookStatus;
 import ks.m5s.model.Books;
 import ks.m5s.model.Student;
 import lombok.Data;
@@ -17,9 +21,8 @@ import lombok.Data;
 @Data
 public class BookLendingServiceImpl implements IBookLendingService{
 	
-	public LocalDateTime date;
+	public LocalDate date = LocalDate.now();
 	
-	private Student student;
 	private Integer noOfBooksOut;
 	private List <String> namesOfBooksOut;
 	
@@ -30,7 +33,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	private IStudentDao repoStud;
 	
 	@Override
-	public int bookCheckOut(Integer studLibId, Books bookOut) {
+	public int bookCheckOut(Student student, BookStatus bookOut) {
 		
 		boolean available = bookOut.getBookOut();
 		if(available) {
@@ -40,7 +43,8 @@ public class BookLendingServiceImpl implements IBookLendingService{
 				//set no of books lent
 				student.setNoOfBooksOut(noOfBooksOut);
 				//set date of loan
-				bookOut.getDateOfLoan();
+				bookOut.setDateOfLoan(date);
+				student.setDateOfLoan(date);
 				// add Book to List of Books out
 				namesOfBooksOut.add(null);
 				
@@ -58,6 +62,14 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	public List<Books> namesOfBooksOut() {
 		return (List<Books>) repoBooks.findAll();
 	}
+
+	@Override
+	public List<Books> getBooks(Integer bookId) {
+		Optional<Books> optional = repoBooks.findById(bookId);
+		return (List<Books>) optional.get();		
+		
+	}
+
 
 
 }

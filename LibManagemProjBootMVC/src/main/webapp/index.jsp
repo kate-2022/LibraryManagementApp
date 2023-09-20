@@ -1,14 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>University Library Home</title>
+<meta charset="UTF-8">
+<title>University Library</title>
 </head>
-<body style="lightgreen">
-
-		<jsp:forward page="choose"/>
-		
+<body>
+		<% response.sendRedirect("book/bookSearch"); %>
 </body>
 </html>

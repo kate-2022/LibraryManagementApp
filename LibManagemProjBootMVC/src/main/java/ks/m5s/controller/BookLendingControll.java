@@ -1,5 +1,6 @@
 package ks.m5s.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,13 +21,22 @@ public class BookLendingControll {
 	@Autowired
 	private IBookLendingService service;
 	
-	@GetMapping("/checkOut")
-	public String findABook(Map<String, Object> model, @ModelAttribute ("bookTrack") Books book) {
+	// private Boolean bookOut;
+	
+	@GetMapping("/search")
+	public String findABook(Map<String, Object> model, @ModelAttribute ("bTrack") Books book) {
+		System.out.println("Implementation class is :: " + service.getClass().getName());
+//	    book.setBookName("Chocolate2");
+//	    book.setAuthorFirstName("kleineMaus");
+//	    book.setAuthorLastName("Schaak");
+//	    book.setYearOfPublication(2023);
+//		List<Books> books = service.getBooks(1);
 		return "bookSearch";
 	}
     
-	@PostMapping("/checkOut")
-	public String bookCheckout(Map<String, Object> map, @ModelAttribute("bookLend") Books booking) {
+	@PostMapping("/search")
+	public String bookCheckout(Map<String, Object> map, @ModelAttribute("bLend") Books booking) {
+		
 		return "bCheckOut";
 	}
 }

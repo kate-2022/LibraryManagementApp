@@ -10,37 +10,34 @@
 <body>
 	<center>
 		<h1 style ='color:blue; text-align:center'>Book Checkout</h1>
-			<form:form method="POST" modelAttribute = "bookLend">
+			<form:form method="POST" modelAttribute = "bLend">
 				<table>
 				<tr>
-					<th>BOOK ID</th>
+					<th>Book ID</th>
 					<td><form:input path= 'bookId'/></td>
 				</tr>
 						<tr>
-					<th>BOOK NAME</th>
+					<th>Book Name</th>
 					<td><form:input path= 'bookName'/></td>
 				</tr>
 						<tr>
-					<th>AUTHOR LAST NAME</th>
+					<th>Author Last Name</th>
 					<td><form:input path= 'authorLastName'/></td>
 				</tr>
 						<tr>
-					<th>AUTHOR FIRST NAME</th>
+					<th>Author First Name</th>
 					<td><form:input path= 'authorFirstName'/></td>
 				</tr>
 						<tr>
-					<th>YEAR OF PUBLISH</th>
-					<td><form:input path= 'yearOfPublish'/></td>
-				</tr>
-				<tr> 
-					<td><input type = 'submit' value='register'></td>
-				</tr>
-					
+					<th>Year of Publication</th>
+					<td><form:input path= 'yearOfPublication'/></td>
+				</tr>			
 				
 				</table>
 			</form:form>
-
-
+			<tr>
+						<td><input type="submit" value="lend" class= "save"/></td>
+				</tr>
 
 
 	</center>

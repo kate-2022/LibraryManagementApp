@@ -1,9 +1,9 @@
 package ks.m5s;
 
-import org.apache.catalina.core.ApplicationContext;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
+
 
 @SpringBootApplication
 public class LibManagemProjBootMvcApplication {
@@ -12,8 +12,6 @@ public class LibManagemProjBootMvcApplication {
 		
 	            SpringApplication.run(LibManagemProjBootMvcApplication.class, args);
 	  
-//		ApplicationContext context = (ApplicationContext) SpringApplication.run(LibManagemProjBootMvcApplication.class, args);
-//	       ((ConfigurableApplicationContext) context).close();
 	
 	}
 

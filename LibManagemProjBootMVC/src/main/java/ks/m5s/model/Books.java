@@ -1,6 +1,5 @@
 package ks.m5s.model;
 
-import java.sql.Date;
 import java.time.LocalDate;import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
@@ -18,11 +17,10 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
 public class Books {
 	
-	LocalDateTime ldt = LocalDateTime.now();
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,11 +28,8 @@ public class Books {
 	private String bookName;
 	private String authorLastName;
 	private String authorFirstName;
-	private Date yearOfPublication;
-	private Boolean bookOut;
-	private LocalDateTime dateOfLoan= ldt;
-	
-	private Integer libIdOfStudentLoan;
+	private Integer yearOfPublication;
+
 	
 
 

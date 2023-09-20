@@ -9,16 +9,26 @@
 </head>
 <body> 
 	<center>
-		<h1 style = 'color:blue; text-align:center'>Book Search</h1>
-		<form:form method="POST" modelAttribute = "bookTrack">
+	
+	<div id="wrapper">
+		<div id= "header">
+			<h2>Library Management - Book Search</h2>
+		</div>
+	
+	</div>
+	
+	<div id="container">
+	<h1 style = 'color:blue; text-align:center'>Book Search</h1>
 		
-		<table>
-				<tr>
+		<form:form method="POST" modelAttribute = "bTrack">
+		
+		<table>	
+			<tbody><tr>
 					<th>Book ID</th>
 					<td><form:input path= 'bookId'/></td>
 				</tr>
 						<tr>
-					<th>BookName</th>
+					<th>Book Name</th>
 					<td><form:input path= 'bookName'/></td>
 				</tr>
 						<tr>
@@ -33,19 +43,15 @@
 					<th>Year of Publication</th>
 					<td><form:input path= 'yearOfPublication'/></td>
 				</tr>
-					
-						<td><input type="submit" value="submit"/></td>
-					
-
-				</table>
-		
-		
-		
-		
-		
-		
-		</form:form>
 	
+				<tr>
+						<td><input type="submit" value="search" class= "search"/></td>
+				</tr>
+		
+			</tbody>
+		</table>
+		</form:form>
+	</div>	
 	
 	
 	</center>
