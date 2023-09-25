@@ -26,16 +26,22 @@ public class BookLendingControll {
 	@GetMapping("/search")
 	public String findABook(Map<String, Object> model, @ModelAttribute ("bTrack") Books book) {
 		System.out.println("Implementation class is :: " + service.getClass().getName());
-//	    book.setBookName("Chocolate2");
-//	    book.setAuthorFirstName("kleineMaus");
-//	    book.setAuthorLastName("Schaak");
-//	    book.setYearOfPublication(2023);
-//		List<Books> books = service.getBooks(1);
+	       		model.put("bookId", book);
+	       		model.put("booName", book);
+	       		model.put("authorLastName", book);
+	       		model.put("authorFirstName", book);
+	       		model.put("ayeraOfPublication", book);
 		return "bookSearch";
 	}
     
 	@PostMapping("/search")
 	public String bookCheckout(Map<String, Object> map, @ModelAttribute("bLend") Books booking) {
+		System.out.println("Implementation class is :: " + service.getClass().getName());
+ 		map.put("bookId", booking);
+   		map.put("booName", booking);
+   		map.put("authorLastName", booking);
+   		map.put("authorFirstName", booking);
+   		map.put("ayeraOfPublication", booking);
 		
 		return "bCheckOut";
 	}
