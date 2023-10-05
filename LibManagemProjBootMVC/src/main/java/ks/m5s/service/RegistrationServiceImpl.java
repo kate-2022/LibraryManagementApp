@@ -1,9 +1,13 @@
 package ks.m5s.service;
 
+import org.springframework.stereotype.Service;
+
 import ks.m5s.dao.ILibrarianDao;
 import ks.m5s.dao.IStudentDao;
+import lombok.Data;
 
-
+@Service
+@Data
 public class RegistrationServiceImpl implements IRegistrationService {
 	
 	private ILibrarianDao repoLib;

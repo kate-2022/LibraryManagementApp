@@ -1,20 +1,15 @@
 package ks.m5s.model;
 
-import java.time.LocalDate;import java.time.LocalDateTime;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-//import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 //import ks.m5s.service.BookStatus;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+//@Component
 @Entity
 @Data
 //@AllArgsConstructor

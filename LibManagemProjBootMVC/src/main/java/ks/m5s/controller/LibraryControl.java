@@ -1,15 +1,17 @@
 package ks.m5s.controller;
 
 import java.time.LocalDate;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import ks.m5s.service.BookLendingServiceImpl;
+import ks.m5s.model.Books;
+import ks.m5s.service.IBookLendingService;
 
 @Controller
 @RequestMapping("/lib")
@@ -21,7 +23,19 @@ public class LibraryControl {
 	}
 	
 	@Autowired
-	private BookLendingServiceImpl bookOrganize; 
+	private IBookLendingService bookOrganize; 
+
+	
+	@PostMapping ("/safe")
+	public String safeBookToCatalouge(Map<String, Object> model, @ModelAttribute("safeBook") Books book) {
+		
+		System.out.println("LibraryControl.safeBookToCatalogue");
+		System.out.println(book);
+		model.put("next entry", book);
+		
+		return("bookSafe");
+		
+	}
 	
 	
 }

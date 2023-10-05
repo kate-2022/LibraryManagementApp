@@ -36,7 +36,7 @@
 				</table>
 			</form:form>
 			<tr>
-						<td><input type="submit" value="lend" class= "save"/></td>
+						<td><input type="submit" value="lend" class= "search"/></td>
 				</tr>
 
 
