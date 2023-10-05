@@ -23,11 +23,12 @@ public class LibraryControl {
 	}
 	
 	@Autowired
-	private IBookLendingService bookOrganize; 
+	private IBookLendingService bookOrga; 
 
 	
 	@PostMapping ("/safe")
 	public String safeBookToCatalouge(Map<String, Object> model, @ModelAttribute("safeBook") Books book) {
+		System.out.println("Implementing class is :: " + bookOrga.getClass().getName());
 		
 		System.out.println("LibraryControl.safeBookToCatalogue");
 		System.out.println(book);
