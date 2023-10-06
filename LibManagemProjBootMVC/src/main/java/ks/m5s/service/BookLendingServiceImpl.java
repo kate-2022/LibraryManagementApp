@@ -1,8 +1,6 @@
 package ks.m5s.service;
 
-import java.sql.Date;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,17 +21,25 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	public LocalDate date = LocalDate.now();
 	
 	private Integer noOfBooksOut;
-	private List <String> namesOfBooksOut;
+	private Books bookOfInterest;
+	private List <Object> namesOfBooksOut;
 	
 	@Autowired
-	private IBooksDao repoBooks;
+	private IBooksDao repoBook;
 	
 	@Autowired
 	private IStudentDao repoStud;
 	
+	
 	@Override
-	public int bookCheckOut(Student student, BookStatus bookOut) {
-		
+	public List<Books> namesOfBooksOut() {
+		List<Books> list = (List<Books>)repoBook.findAll();
+		System.out.println(list);
+		return list;
+	}
+	
+	@Override
+	public int bookCheckOut(Student student, Books bookToLend, BookStatus bookOut) {
 		boolean available = bookOut.getBookOut();
 		if(available) {
 			noOfBooksOut = student.getNoOfBooksOut();
@@ -45,7 +51,8 @@ public class BookLendingServiceImpl implements IBookLendingService{
 				bookOut.setDateOfLoan(date);
 				student.setDateOfLoan(date);
 				// add Book to List of Books out
-				namesOfBooksOut.add(null);
+				namesOfBooksOut.add(bookToLend);
+				System.out.println(namesOfBooksOut);
 				
 				if (noOfBooksOut>=3) {
 					System.out.println("Limit reached, no additional book loan possible!");	
@@ -56,19 +63,14 @@ public class BookLendingServiceImpl implements IBookLendingService{
 		
 	}
 	
-
+	
 	@Override
-	public List<Books> namesOfBooksOut() {
-		return (List<Books>) repoBooks.findAll();
+	public Books getBook(Integer bookId) {
+		// to avoid Null-Pointer-Exception when book is not available
+		Optional<Books> optional = repoBook.findById(bookId);
+		System.out.println(optional);
+		return optional.get();
 	}
-
-	@Override
-	public List<Books> getBooks(Integer bookId) {
-		Optional<Books> optional = repoBooks.findById(bookId);
-		return (List<Books>) optional.get();		
-		
-	}
-
 
 
 }

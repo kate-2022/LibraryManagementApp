@@ -11,22 +11,15 @@ import lombok.Data;
 @Entity
 @Data
 public class BookStatus {
-	
+		
 
-
-	
-//	//default time zone
-//	ZoneId defaultZoneId = ZoneId.systemDefault();
-//	
 //	//creating the instance of LocalDate using the day, month, year info
 //	LocalDate localDate = LocalDate.of(2023, 9, 17);
-//	
-//	//local date + atStartOfDay() + default time zone + toInstant() = Date
-//	Date dateNow = (Date) Date.from(localDate.atStartOfDay(defaultZoneId).toInstant());
+
 	
 	@Id
 	private Integer lentBookId;
-	private Boolean bookOut;
+	private Boolean bookOut = true;
 	private LocalDate dateOfLoan= LocalDate.now();
 	private Integer libIdOfStudentLoan;
 	
@@ -35,13 +28,9 @@ public class BookStatus {
 //	public BookStatus(Books checkBook) {
 //		this.lentBookId = book.getBookId();
 //	}
-//	
 	
 	
-	//Displaying LocalDate and Date
-//	System.out.println("LocalDate is: " + localDate);
-//	System.out.println("Date is: " + dateNow);
-//	
+
 	
 	
 
