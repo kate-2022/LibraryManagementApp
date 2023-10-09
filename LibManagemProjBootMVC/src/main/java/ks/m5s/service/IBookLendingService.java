@@ -1,4 +1,3 @@
-
 package ks.m5s.service;
 
 import java.util.List;
@@ -11,7 +10,7 @@ public interface IBookLendingService {
 
 	public List <Books> namesOfBooksOut();
 		
-	public int bookCheckOut(Student student, Books bookToLend, BookStatus bookOut);
+	public int bookCheckOut(Student student, BookStatus bookOut);
 
-	public Books getBook(Integer bookId);
+	public List<Books> getBooks(Integer bookId);
 }

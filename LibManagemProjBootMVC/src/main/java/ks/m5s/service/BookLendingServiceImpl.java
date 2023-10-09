@@ -21,25 +21,17 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	public LocalDate date = LocalDate.now();
 	
 	private Integer noOfBooksOut;
-	private Books bookOfInterest;
-	private List <Object> namesOfBooksOut;
+	private List <String> namesOfBooksOut;
 	
 	@Autowired
-	private IBooksDao repoBook;
+	private IBooksDao repoBooks;
 	
 	@Autowired
 	private IStudentDao repoStud;
 	
-	
 	@Override
-	public List<Books> namesOfBooksOut() {
-		List<Books> list = (List<Books>)repoBook.findAll();
-		System.out.println(list);
-		return list;
-	}
-	
-	@Override
-	public int bookCheckOut(Student student, Books bookToLend, BookStatus bookOut) {
+	public int bookCheckOut(Student student, BookStatus bookOut) {
+		
 		boolean available = bookOut.getBookOut();
 		if(available) {
 			noOfBooksOut = student.getNoOfBooksOut();
@@ -51,8 +43,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 				bookOut.setDateOfLoan(date);
 				student.setDateOfLoan(date);
 				// add Book to List of Books out
-				namesOfBooksOut.add(bookToLend);
-				System.out.println(namesOfBooksOut);
+				namesOfBooksOut.add(null);
 				
 				if (noOfBooksOut>=3) {
 					System.out.println("Limit reached, no additional book loan possible!");	
@@ -63,14 +54,19 @@ public class BookLendingServiceImpl implements IBookLendingService{
 		
 	}
 	
-	
+
 	@Override
-	public Books getBook(Integer bookId) {
-		// to avoid Null-Pointer-Exception when book is not available
-		Optional<Books> optional = repoBook.findById(bookId);
-		System.out.println(optional);
-		return optional.get();
+	public List<Books> namesOfBooksOut() {
+		return (List<Books>) repoBooks.findAll();
 	}
+
+	@Override
+	public List<Books> getBooks(Integer bookId) {
+		Optional<Books> optional = repoBooks.findById(bookId);
+		return (List<Books>) optional.get();		
+		
+	}
+
 
 
 }

@@ -23,25 +23,28 @@ public class BookLendingControll {
 	// private Boolean bookOut;
 	
 	@GetMapping("/search")
-	public String findABook(Map<String, Object> model, @ModelAttribute ("bTrack") Books book) {
+		public String findABook(Map<String, Object> model, @ModelAttribute ("bTrack") Books book) {
 		System.out.println("Implementation class is :: " + service.getClass().getName());
-	       		model.put("bookId", book);
-	       		model.put("booName", book);
-	       		model.put("authorLastName", book);
-	       		model.put("authorFirstName", book);
-	       		model.put("ayeraOfPublication", book);
+//	       		model.put("bookId", book);
+//	       		model.put("booName", book);
+//	       		model.put("authorLastName", book);
+//	       		model.put("authorFirstName", book);
+//	       		model.put("yearOfPublication", book);
 		return "bookSearch";
 	}
     
 	@PostMapping("/search")
-	public String bookCheckout(Map<String, Object> map, @ModelAttribute("bLend") Books booking) {
+	public String bookCheckout(Map<String, Object> map, @ModelAttribute("bTrack") Books book) {
 		System.out.println("Implementation class is :: " + service.getClass().getName());
- 		map.put("bookId", booking);
-   		map.put("booName", booking);
-   		map.put("authorLastName", booking);
-   		map.put("authorFirstName", booking);
-   		map.put("ayeraOfPublication", booking);
+ 		map.put("bookId", book);
+   		map.put("booName", book);
+   		map.put("authorLastName", book);
+   		map.put("authorFirstName", book);
+   		map.put("ayeraOfPublication", book);
 		
 		return "bCheckOut";
 	}
+	
+	
+	
 }

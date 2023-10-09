@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.AllArgsConstructor;
 //import ks.m5s.service.BookStatus;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 //@Component
 @Entity
 @Data
-//@AllArgsConstructor
+@AllArgsConstructor
 @NoArgsConstructor
 public class Books {
 	

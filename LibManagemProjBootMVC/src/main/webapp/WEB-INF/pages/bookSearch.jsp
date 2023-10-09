@@ -11,51 +11,7 @@
 </head>
 <body> 
 	<center>
-	<!-- <div id="wrapper">
-		<div id="header">
-			<h2>CRM - Customer Relationship Manager</h2>
-		</div>
-	</div>
-	<div id="container">
-		<div id="content">
-
-			<!-- put new button:: Add Customer -->
-		<!-- <input type='button' value='Add Customer'
-				onclick="window.location.href='showForm'; return false;"
-				class="add-button" />
-
-			<table>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email</th>
-					<th>Action</th>
-				</tr>
-				<c:forEach var="customer" items="${customers}">
-					
-					<c:url var="updateLink" value="/customer/showFormForUpdate">
-						<c:param name="customerId" value="${customer.id}"/>
-					</c:url>
-					
-					<c:url var="deleteLink" value="/customer/showFormForDelete">
-						<c:param name="customerId" value="${customer.id}"/>
-					</c:url>
-				
-					<tr>
-						<td>${customer.firstName}</td>
-						<td>${customer.lastName}</td>
-						<td>${customer.email}</td>
-						<td>
-							<a href='${updateLink}'>UPDATE</a>
-										|
-							<a href="${deleteLink}"
-								onclick="if(!(confirm('Are you sure u want to delete this customer?')))return false;">DELETE</a>
-						</td>
-					</tr>
-				</c:forEach>
-			</table>
-		</div>
-	</div> -->	 
+ 
 	<div id="wrapper">
 		<div id= "header">
 			<h2>Library Management - Book Search</h2>
@@ -66,8 +22,7 @@
 	<div id="container">
 	<h1 style = 'color:blue; text-align:center'>Book Search</h1>
 		
-		<form:form method="POST" modelAttribute = "bTrack">
-		
+		<form:form action ="search" method="POST" modelAttribute = "bTrack">
 		<table>	
 			<tbody><tr>
 					<th>Book ID</th>
@@ -91,13 +46,16 @@
 				</tr>
 	
 				<tr>
-						<td><input type="submit" value="search" class= "search"/></td>
+					  <td><input type="submit" value="search" class= "search"/></td>
 				</tr>
 		
 			</tbody>
 		</table>
-		</form:form>
-	</div>	
+	  </form:form>
+		
+			<!--		<input type='button' value='search'
+					onclick="window.location.href='bCheckOut'; return false;"
+					class="search" /> -->	
 	
 	
 	</center>
