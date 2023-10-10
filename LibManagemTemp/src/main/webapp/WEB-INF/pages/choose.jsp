@@ -17,28 +17,28 @@
 				<h2 style="color:green;">Please Choose an Option  </h2>
 				<br>				
 				<input type='button' value='Student Registration'
-					onclick="window.location.href='studentReg'; return false;"
+					onclick="window.location.href='./studentReg'; return false;"
 					class="search" />
 					
 				<input type='button' value='Librarian Registration'
-					onclick="window.location.href='libReg'; return false;"
+					onclick="window.location.href='./libReg'; return false;"
 					class="search" />
 				
-			
+		 	 	<br>	<br>		
 			    
 			    <h1 style="color:blue;">Start here for Book Management</h1> 
 			   	<h2 style="color:green;">Please Choose an Option  </h2>
 				<br>
 				<input type='button' value='Book Search'
-					onclick="window.location.href='bookSearch'; return false;"
+					onclick="window.location.href='./bookSearch'; return false;"
 					class="search" />
 					
 				<input type='button' value='Book CheckOut'
-					onclick="window.location.href='bCheckOut'; return false;"
+					onclick="window.location.href='./bCheckOut'; return false;"
 					class="search" />
 					
 				<input type='button' value='Book Return'
-					onclick="window.location.href='bReturn'; return false;"
+					onclick="window.location.href='./bReturn'; return false;"
 					class="search" />
 			    
 

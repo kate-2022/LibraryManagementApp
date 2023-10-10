@@ -1,6 +1,7 @@
 package ks.m5s.controller;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,5 +39,12 @@ public class LibraryControl {
 		
 	}
 	
+	
+	public String displayCatalogue () {
+		
+		List<Books> books =bookOrga.displayCatalogue();
+		for(Books elem: books) System.out.println(books);
+		return"list displayed";
+	}
 	
 }

@@ -15,4 +15,6 @@ public interface IBookLendingService {
 	public List<Books> getBooks(Integer bookId);
 	
 	public void safeBookToCatalouge(Books book);
+	
+	public List<Books> displayCatalogue();
 }
