@@ -7,6 +7,6 @@
 <title>University Library</title>
 </head>
 <body>
-		<% response.sendRedirect("book/search"); %>
+		<% response.sendRedirect("book/home"); %>
 </body>
 </html>

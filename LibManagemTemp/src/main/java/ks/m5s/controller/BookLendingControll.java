@@ -41,6 +41,17 @@ public class BookLendingControll {
 		return "bCheckOut";
 	}
 	
+	@GetMapping("/display")
+	public String displayConfirmation() {
+		
+		return "confirm";
+	}
+	
+	@GetMapping("/home")
+	public String showStartPage() {
+		
+		return "choose";
+	}
 	
 	
 }

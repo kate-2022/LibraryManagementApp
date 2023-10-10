@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
     
   <!-- <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> --> 
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,16 +13,35 @@
 
 			<center> 
 			
-				<h1style="color:blue;">Start here for Registration</h1> 
-				<a href="StudentRegistration"> </a>
-			    <a href="LibrarianRegistration"> </a>
-			    
-			    <h1style="color:blue;">Start here for Book Management</h1> 
-					<a href="BookSearch"> </a>
-			    	<a href="BookCheckOut"> </a>
-			    	<a href="BookReturn"> </a>
-		
+				<h1 style="color:blue;">Start here for Registration</h1> 
+				<h2 style="color:green;">Please Choose an Option  </h2>
+				<br>				
+				<input type='button' value='Student Registration'
+					onclick="window.location.href='studentReg'; return false;"
+					class="search" />
+					
+				<input type='button' value='Librarian Registration'
+					onclick="window.location.href='libReg'; return false;"
+					class="search" />
+				
 			
+			    
+			    <h1 style="color:blue;">Start here for Book Management</h1> 
+			   	<h2 style="color:green;">Please Choose an Option  </h2>
+				<br>
+				<input type='button' value='Book Search'
+					onclick="window.location.href='bookSearch'; return false;"
+					class="search" />
+					
+				<input type='button' value='Book CheckOut'
+					onclick="window.location.href='bCheckOut'; return false;"
+					class="search" />
+					
+				<input type='button' value='Book Return'
+					onclick="window.location.href='bReturn'; return false;"
+					class="search" />
+			    
+
 			</center>
 
 </body>

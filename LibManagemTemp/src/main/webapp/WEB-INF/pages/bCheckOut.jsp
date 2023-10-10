@@ -12,7 +12,7 @@
 <body>
 	<center>
 		<h1 style ='color:blue; text-align:center'>Book Checkout</h1>
-			<form:form action =  "confirm"  method="GET" modelAttribute = "bTrack">
+			<form:form action = "display"  method="GET" modelAttribute = "bTrack">
 				<table>
 				<tr>
 					<th>Book ID</th>
