@@ -9,7 +9,7 @@
 <meta charset="ISO-8859-1">
 <title>Library Overview</title>
 </head>
-<body>
+<body bgcolor="lightblue">
 			<center> 
 			
 				<h1 style="color:blue;">Start here for Registration</h1> 
@@ -30,7 +30,7 @@
 					onclick="window.location.href='/LibManagement/book/search';"/>
 					
 				<input type='button' value='Book CheckOut'
-					onclick="window.location.href='/LibManagement/book/search';"/>
+					onclick="window.location.href='/LibManagement/book/check';"/>
 					
 				<input type='button' value='Book Return'
 					onclick="window.location.href='/LibManagement/book/bookBack';"/>

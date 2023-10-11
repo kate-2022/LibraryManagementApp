@@ -41,6 +41,7 @@ public class LibraryControl {
 	
 	@GetMapping("/studReg")
 	public String registerStudent(Student student) {	
+		System.out.println("Implementation class is :: " + reg.getClass().getName());
 		String result= reg.registerStudent();		
 		return result;
 	}
@@ -64,7 +65,7 @@ public class LibraryControl {
 	
 	@PostMapping ("/safe")
 	public String safeBookToCatalouge(Map<String, Object> model, @ModelAttribute("safeBook") Books book) {
-		System.out.println("Implementing class is :: " + bookOrga.getClass().getName());
+		System.out.println("Implementation class is :: " + bookOrga.getClass().getName());
 		bookOrga.safeBookToCatalouge(book);
 		System.out.println("LibraryControl.safeBookToCatalogue");
 		System.out.println(book);
