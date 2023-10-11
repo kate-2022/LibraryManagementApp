@@ -2,18 +2,21 @@
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
     
   <!-- <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> --> 
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+  
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Librarian Registration</title>
 </head>
-<body bgcolor="green">
+<body bgcolor="blue">
 		
 	<form method="post" action="./control/LReg">
+		<br>	<br>	<br>	
 		<table align="center">
 		 	<tr>
-		 		<td>ENROLLMENTNO</td>
+		 		<td>EPLOYEE_NO</td>
 		 		<td><input type="text" name="emplNo"/></td>
 		 	</tr>
 				<tr>
@@ -25,7 +28,7 @@
 		 		<td><input type="text" name="firstName"/></td>
 		 	</tr>
 				<tr>
-		 		<td>ENROLLMENTNO</td>
+		 		<td>DateOfBirthS</td>
 		 		<td><input type="date" name="doB"/></td>
 		 	</tr>
 				<tr>
@@ -34,7 +37,7 @@
 		 	</tr>
 		
 		</table>
-
+   </form>
 </body>
 
 </html>

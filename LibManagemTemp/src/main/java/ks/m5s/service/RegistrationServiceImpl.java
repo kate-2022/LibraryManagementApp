@@ -14,15 +14,15 @@ public class RegistrationServiceImpl implements IRegistrationService {
 	private IStudentDao repoStud;
 
 	@Override
-	public String registerLibrarian() {
-		
+	public String registerLibrarian() {		
 		return "libReg";
 	}
+	
 	@Override
 	public String registerStudent() {
-	
 		return "studentReg";
 	}
+	
 	@Override
 	public void deleteLibrAccountById(int id) {
 		repoLib.deleteById(id);
