@@ -12,7 +12,7 @@
 </head>
 <body bgcolor="lightgreen">
 		
-	<form method="post" action="/studRegConf">
+	<form action="studRegConf" method="GET">
 		<br>	<br>	<br>	
 		
 		<h1 style="color:blue">Student Registration</h1>
