@@ -10,7 +10,7 @@
 <meta charset="ISO-8859-1">
 <title>Student Registration</title>
 </head>
-<body bgcolor="green">
+<body bgcolor="blue">
 		
 	<form method="post" action="./control/SReg">
 		<br>	<br>	<br>	
