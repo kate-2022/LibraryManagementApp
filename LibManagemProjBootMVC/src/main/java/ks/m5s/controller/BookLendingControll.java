@@ -47,11 +47,11 @@ public class BookLendingControll {
 		return "confirm";
 	}
 	
-	@GetMapping("/home")
-	public String showStartPage() {
-		
-		return "choose";
-	}
+//	@GetMapping("/home")
+//	public String showStartPage() {
+//		
+//		return "choose";
+//	}
 	
 	
 }
