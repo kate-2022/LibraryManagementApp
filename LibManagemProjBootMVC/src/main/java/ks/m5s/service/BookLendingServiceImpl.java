@@ -83,5 +83,11 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	}
 
 
+	@Override
+	public void deletBookById(Integer id) {
+		repoBooks.deleteById(noOfBooksOut);
+	}
+
+
 
 }

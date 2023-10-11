@@ -22,7 +22,7 @@
 	<div id="container">
 	<h1 style = 'color:blue; text-align:center'>Book Search</h1>
 		
-		<form:form action ="search" method="POST" modelAttribute = "bTrack">
+		<form:form action ="check" method="POST" modelAttribute = "bTrack">
 		<table>	
 			<tbody><tr>
 					<th>Book ID</th>
