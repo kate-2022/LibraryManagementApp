@@ -10,12 +10,12 @@
 <meta charset="ISO-8859-1">
 <title>Student Registration</title>
 </head>
-<body bgcolor="lightblue">
+<body bgcolor="lightgreen">
 		
 	<form method="post" action="/studRegConf">
 		<br>	<br>	<br>	
 		
-		<h1 style="color:green">Student Registration</h1>
+		<h1 style="color:blue">Student Registration</h1>
 		<table align="center">
 		 	<tr>
 		 		<td><h4>ENROLLMENT_NO</h4></td>
@@ -30,8 +30,7 @@
 		 		<td><input type="text" name="firstName"/></td>
 		 	</tr>
 				<tr>
-				<td><h4>LAST_NAME</h4></td>
-		 		<td>Date_of_Birth</td>
+				<td><h4>Date_of_Birth</h4></td>
 		 		<td><input type="date" name="doB"/></td>
 		 	</tr>
 				<tr>

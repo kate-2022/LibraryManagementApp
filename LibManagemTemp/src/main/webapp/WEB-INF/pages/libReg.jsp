@@ -10,11 +10,11 @@
 <meta charset="ISO-8859-1">
 <title>Librarian Registration</title>
 </head>
-<body bgcolor="lightblue">
+<body bgcolor="lightgreen">
 		
 	<form method="post" action="/libRegConf">
 		<br>	<br>	<br>	
-		<h1 style="color:green">Librarian Registration</h1>
+		<h1 style="color:blue">Librarian Registration</h1>
 		<table align="center">
 		 	<tr>
 		 		<td><h4>EMPLOYEE_NO</h4></td>
