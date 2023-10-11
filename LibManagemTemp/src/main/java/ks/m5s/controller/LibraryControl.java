@@ -39,17 +39,27 @@ public class LibraryControl {
 		return "choose";
 	}
 	
-	@GetMapping("/studentReg")
+	@GetMapping("/studReg")
 	public String registerStudent(Student student) {	
 		String result= reg.registerStudent();		
 		return result;
 	}
 	
-	@GetMapping("/libReg")
+	@PostMapping("/studRegConf")
+	public String studRegConfirmation() {		
+		return "studRegConf";
+	}
+	
+	@GetMapping("/librReg")
 	public String registerLibrarian(Librarian librarian){
 		String outcome = reg.registerLibrarian();
 		return outcome;
 		}
+	
+	@PostMapping("/libRegConf")
+	public String libRegConfirmation() {		
+		return "libRegConf";
+	}
 	
 	
 	@PostMapping ("/safe")

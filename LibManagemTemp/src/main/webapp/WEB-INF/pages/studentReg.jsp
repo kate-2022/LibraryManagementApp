@@ -12,23 +12,25 @@
 </head>
 <body bgcolor="blue">
 		
-	<form method="post" action="./control/SReg">
+	<form method="post" action="/studRegConf">
 		<br>	<br>	<br>	
+		
+		<h1 style="color:green">Student Registration</h1>
 		<table align="center">
 		 	<tr>
-		 		<td>ENROLLMENTNO</td>
+		 		<td>ENROLLMENT_NO</td>
 		 		<td><input type="text" name="enrolNo"/></td>
 		 	</tr>
 				<tr>
-		 		<td>LASTNAME</td>
+		 		<td>LAST_NAME</td>
 		 		<td><input type="text" name="lastName"/></td>
 		 	</tr>
 		 		<tr>
-		 		<td>FIRSTNAME</td>
+		 		<td>FIRST_NAME</td>
 		 		<td><input type="text" name="firstName"/></td>
 		 	</tr>
 				<tr>
-		 		<td>DateOfBirth</td>
+		 		<td>Date_of_Birth</td>
 		 		<td><input type="date" name="doB"/></td>
 		 	</tr>
 				<tr>

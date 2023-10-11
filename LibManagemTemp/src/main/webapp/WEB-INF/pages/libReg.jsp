@@ -12,23 +12,24 @@
 </head>
 <body bgcolor="blue">
 		
-	<form method="post" action="./control/LReg">
+	<form method="post" action="/libRegConf">
 		<br>	<br>	<br>	
+		<h1 style="color:green">Librarian Registration</h1>
 		<table align="center">
 		 	<tr>
 		 		<td>EPLOYEE_NO</td>
 		 		<td><input type="text" name="emplNo"/></td>
 		 	</tr>
 				<tr>
-		 		<td>LASTNAME</td>
+		 		<td>LAST_NAME</td>
 		 		<td><input type="text" name="lastName"/></td>
 		 	</tr>
 		 		<tr>
-		 		<td>FIRSTNAME</td>
+		 		<td>FIRST_NAME</td>
 		 		<td><input type="text" name="firstName"/></td>
 		 	</tr>
 				<tr>
-		 		<td>DateOfBirthS</td>
+		 		<td>Date_of_Birth</td>
 		 		<td><input type="date" name="doB"/></td>
 		 	</tr>
 				<tr>

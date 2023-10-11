@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Student Registration</title>
+<title>Librarian Registration</title>
 </head>
 <body bgcolor="lightblue">
 	<br/><br/>

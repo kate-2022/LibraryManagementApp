@@ -9,13 +9,18 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import ks.m5s.model.BookStatus;
 import ks.m5s.model.Books;
+import ks.m5s.model.Student;
 import ks.m5s.service.IBookLendingService;
 
 
 @Controller
 @RequestMapping("/book")
 public class BookLendingControll {
+	
+	Student student; 
+	BookStatus bookOut;
 	
 	@Autowired
 	private IBookLendingService service;
@@ -37,7 +42,7 @@ public class BookLendingControll {
    		map.put("authorLastName", book);
    		map.put("authorFirstName", book);
    		map.put("ayeraOfPublication", book);
-		
+   		service.bookCheckOut(student, bookOut);
 		return "bCheckOut";
 	}
 	
@@ -46,6 +51,16 @@ public class BookLendingControll {
 		
 		return "confirm";
 	}
+	
+	@GetMapping("bookBack")
+	public String bookReturn(Books book) {
+		Integer id=book.getBookId();
+		service.deletBookById(id);
+		return"bReturn";	
+	}
+	
+	
+	
 	
 //	@GetMapping("/home")
 //	public String showStartPage() {
