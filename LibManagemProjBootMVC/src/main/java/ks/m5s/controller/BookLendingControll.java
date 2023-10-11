@@ -25,17 +25,13 @@ public class BookLendingControll {
 	@GetMapping("/search")
 		public String findABook(Map<String, Object> model, @ModelAttribute ("bTrack") Books book) {
 		System.out.println("Implementation class is :: " + service.getClass().getName());
-//	       		model.put("bookId", book);
-//	       		model.put("booName", book);
-//	       		model.put("authorLastName", book);
-//	       		model.put("authorFirstName", book);
-//	       		model.put("yearOfPublication", book);
+
 		return "bookSearch";
 	}
     
 	@PostMapping("/search")
 	public String bookCheckout(Map<String, Object> map, @ModelAttribute("bTrack") Books book) {
-		System.out.println("Implementation class is :: " + service.getClass().getName());
+	//	System.out.println("Implementation class is :: " + service.getClass().getName());
  		map.put("bookId", book);
    		map.put("booName", book);
    		map.put("authorLastName", book);
@@ -45,6 +41,17 @@ public class BookLendingControll {
 		return "bCheckOut";
 	}
 	
+	@GetMapping("/display")
+	public String displayConfirmation() {
+		
+		return "confirm";
+	}
+	
+	@GetMapping("/home")
+	public String showStartPage() {
+		
+		return "choose";
+	}
 	
 	
 }

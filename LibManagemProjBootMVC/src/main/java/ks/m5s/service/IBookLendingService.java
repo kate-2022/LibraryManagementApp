@@ -13,4 +13,8 @@ public interface IBookLendingService {
 	public int bookCheckOut(Student student, BookStatus bookOut);
 
 	public List<Books> getBooks(Integer bookId);
+	
+	public void safeBookToCatalouge(Books book);
+	
+	public List<Books> displayCatalogue();
 }

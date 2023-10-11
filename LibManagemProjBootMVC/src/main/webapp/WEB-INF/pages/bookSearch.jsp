@@ -57,7 +57,7 @@
 					onclick="window.location.href='bCheckOut'; return false;"
 					class="search" /> -->	
 	
-	
+	</div>
 	</center>
 
 

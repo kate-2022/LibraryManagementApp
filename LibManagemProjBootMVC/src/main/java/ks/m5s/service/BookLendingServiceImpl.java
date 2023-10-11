@@ -22,6 +22,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	
 	private Integer noOfBooksOut;
 	private List <String> namesOfBooksOut;
+	private List<Books>catalogue;
 	
 	@Autowired
 	private IBooksDao repoBooks;
@@ -65,6 +66,20 @@ public class BookLendingServiceImpl implements IBookLendingService{
 		Optional<Books> optional = repoBooks.findById(bookId);
 		return (List<Books>) optional.get();		
 		
+	}
+
+
+	@Override
+	public void safeBookToCatalouge(Books book) {
+	repoBooks.save(book);
+		
+	}
+
+
+	@Override
+	public List<Books> displayCatalogue() {
+		catalogue=(List<Books>)repoBooks.findAll();	
+		return catalogue;
 	}
 
 

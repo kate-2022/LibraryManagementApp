@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +7,6 @@
 <title>University Library</title>
 </head>
 <body>
-		<% response.sendRedirect("book/search"); %>
+		<% response.sendRedirect("book/home"); %>
 </body>
 </html>

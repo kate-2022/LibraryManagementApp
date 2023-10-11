@@ -23,7 +23,7 @@
 	<div id="container">
 	<h1 style = 'color:blue; text-align:center'>Book Search</h1>
 		
-		<form:form method="POST" modelAttribute = "safeBook">
+		<form:form action = "confirm" method="POST" modelAttribute = "safeBook">
 		
 		<table>	
 			<tbody><tr>
