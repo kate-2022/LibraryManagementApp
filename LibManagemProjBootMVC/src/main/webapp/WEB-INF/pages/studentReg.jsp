@@ -10,27 +10,27 @@
 <meta charset="ISO-8859-1">
 <title>Student Registration</title>
 </head>
-<body bgcolor="blue">
+<body bgcolor="lightgreen">
 		
 	<form method="post" action="/studRegConf">
 		<br>	<br>	<br>	
 		
-		<h1 style="color:green">Student Registration</h1>
+		<h1 style="color:blue">Student Registration</h1>
 		<table align="center">
 		 	<tr>
-		 		<td>ENROLLMENT_NO</td>
+		 		<td><h4>ENROLLMENT_NO</h4></td>
 		 		<td><input type="text" name="enrolNo"/></td>
 		 	</tr>
 				<tr>
-		 		<td>LAST_NAME</td>
+				<td><h4>LAST_NAME</h4></td>
 		 		<td><input type="text" name="lastName"/></td>
 		 	</tr>
 		 		<tr>
-		 		<td>FIRST_NAME</td>
+		 		<td><h4>FIRST_NAME</h4></td>
 		 		<td><input type="text" name="firstName"/></td>
 		 	</tr>
 				<tr>
-		 		<td>Date_of_Birth</td>
+				<td><h4>Date_of_Birth</h4></td>
 		 		<td><input type="date" name="doB"/></td>
 		 	</tr>
 				<tr>

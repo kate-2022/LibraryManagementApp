@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Checkout</title>
 </head>
-<body>
+<body bgcolor="lightblue"> 
 	<center>
 		<h1 style ='color:blue; text-align:center'>Book Checkout</h1>
 			<form:form action = "display"  method="GET" modelAttribute = "bTrack">

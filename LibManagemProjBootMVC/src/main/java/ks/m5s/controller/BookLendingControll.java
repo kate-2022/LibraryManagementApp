@@ -58,8 +58,7 @@ public class BookLendingControll {
 	
 	@GetMapping("bookBack")
 	public String bookReturn(Books book) {
-		Integer id=book.getBookId();
-		service.deletBookById(id);
+		service.deletBookById(book);
 		return"bReturn";	
 	}
 	
@@ -67,8 +66,7 @@ public class BookLendingControll {
 	
 	
 //	@GetMapping("/home")
-//	public String showStartPage() {
-//		
+//	public String showStartPage() {	
 //		return "choose";
 //	}
 	

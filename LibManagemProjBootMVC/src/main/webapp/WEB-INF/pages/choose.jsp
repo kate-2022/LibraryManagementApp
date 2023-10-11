@@ -9,7 +9,7 @@
 <meta charset="ISO-8859-1">
 <title>Library Overview</title>
 </head>
-<body>
+<body bgcolor="lightblue">
 			<center> 
 			
 				<h1 style="color:blue;">Start here for Registration</h1> 

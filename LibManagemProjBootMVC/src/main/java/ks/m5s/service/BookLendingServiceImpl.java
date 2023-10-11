@@ -84,8 +84,9 @@ public class BookLendingServiceImpl implements IBookLendingService{
 
 
 	@Override
-	public void deletBookById(Integer id) {
-		repoBooks.deleteById(noOfBooksOut);
+	public void deletBookById(Books book) {
+		int id = book.getBookId();	
+		repoBooks.deleteById(id);
 	}
 
 
