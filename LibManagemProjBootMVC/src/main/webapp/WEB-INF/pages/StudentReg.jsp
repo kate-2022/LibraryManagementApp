@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>Student Registration</title>
 </head>
-<body bgclor="lightgreen">
+<body bgcolor="blue">
 		
 	<form method="post" action="./control/SReg">
 		<table align="center">
