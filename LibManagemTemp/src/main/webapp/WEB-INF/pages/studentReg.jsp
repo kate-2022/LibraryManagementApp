@@ -15,7 +15,7 @@
 	<form action="studRegConf" method="GET">
 		<br>	<br>	<br>	
 		
-		<h1 style="color:blue">Student Registration</h1>
+		<h1 style="color:blue">--------&nbsp&nbspStudent Registration&nbsp&nbsp--------</h1>
 		<table align="center">
 		 	<tr>
 		 		<td><h4>ENROLLMENT_NO</h4></td>
