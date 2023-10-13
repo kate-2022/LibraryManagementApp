@@ -16,7 +16,7 @@
 				<h2 style="color:green;">Please Choose an Option  </h2>
 				<br>				
 				<input type='button' value='Student Registration'
-					onclick="window.location.href='./studReg';"/>
+					onclick="window.location.href='./studReg';"/> 
 					
 				<input type='button' value='Librarian Registration'
 					onclick="window.location.href='./librReg';"/>

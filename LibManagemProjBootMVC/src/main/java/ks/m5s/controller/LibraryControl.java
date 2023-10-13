@@ -46,7 +46,7 @@ public class LibraryControl {
 		return result;
 	}
 	
-	@PostMapping("/studRegConf")
+	@GetMapping("/studRegConf")
 	public String studRegConfirmation() {		
 		return "studRegConf";
 	}
@@ -57,7 +57,7 @@ public class LibraryControl {
 		return outcome;
 		}
 	
-	@PostMapping("/libRegConf")
+	@GetMapping("/libRegConf")
 	public String libRegConfirmation() {		
 		return "libRegConf";
 	}

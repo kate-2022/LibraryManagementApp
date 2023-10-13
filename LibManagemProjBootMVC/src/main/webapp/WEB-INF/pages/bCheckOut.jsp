@@ -9,8 +9,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Checkout</title>
 </head>
-<body bgcolor="lightblue"> 
+<body bgcolor="lightblue">
 	<center>
+	
+	<div id="wrapper">
+		<div id= "header">
+			<h2>Library Management - Book CheckOut</h2>
+		</div>
+	
+	<div id="container">
 		<h1 style ='color:blue; text-align:center'>Book Checkout</h1>
 			<form:form action = "display"  method="GET" modelAttribute = "bTrack">
 				<table>
@@ -41,7 +48,7 @@
 				</tr>
 
 			</form:form>
-
+		</div>
 	</center>
 
 		

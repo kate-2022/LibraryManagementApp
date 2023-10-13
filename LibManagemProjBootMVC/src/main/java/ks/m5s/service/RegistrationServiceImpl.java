@@ -37,5 +37,15 @@ public class RegistrationServiceImpl implements IRegistrationService {
 		
 	}
 
+	@Override
+	public String confirmLibReg() {
+		return "libRegConf";
+	}
+
+	@Override
+	public String confirmStudReg() {
+		return "studRegConf";
+	}
+
 
 }
