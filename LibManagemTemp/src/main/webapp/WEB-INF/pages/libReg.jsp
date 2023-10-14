@@ -12,7 +12,7 @@
 </head>
 <body bgcolor="lightgreen">
 		
-	<form action="libRegConf" method="GET" >
+	<form action="libReg" method="POST" >
 		<br>	<br>	<br>	
 		<center><h1 style="color:blue">--------&nbsp&nbspLibrarian Registration&nbsp&nbsp--------</h1></center>
 

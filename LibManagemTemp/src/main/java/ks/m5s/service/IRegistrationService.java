@@ -1,18 +1,21 @@
 package ks.m5s.service;
 
+import ks.m5s.model.Librarian;
+import ks.m5s.model.Student;
 
 public interface IRegistrationService {
-	
-	public String registerLibrarian();
+
+	String registerLibrarian(Librarian librarian);
 	
 	public String confirmLibReg();
 
-	public String registerStudent();
+	public String registerStudent(Student student);
 	
 	public String confirmStudReg();
 	
 	public void deleteLibrAccountById(int id);
 	
 	public void deleteStudAccount(int id);
+
 	
 }

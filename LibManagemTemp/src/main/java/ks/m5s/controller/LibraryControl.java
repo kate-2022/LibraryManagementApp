@@ -42,7 +42,7 @@ public class LibraryControl {
 	@GetMapping("/studReg")
 	public String registerStudent(Student student) {	
 		System.out.println("Implementation class is :: " + reg.getClass().getName());
-		String result= reg.registerStudent();		
+		String result= reg.registerStudent(student);		
 		return result;
 	}
 	
@@ -53,17 +53,18 @@ public class LibraryControl {
 	
 	@GetMapping("/librReg")
 	public String registerLibrarian(Librarian librarian){
-		String outcome = reg.registerLibrarian();
+		String outcome = reg.registerLibrarian(librarian);
 		return outcome;
 		}
 	
-	@GetMapping("/libRegConf")
+	@PostMapping("/libRegConf")
 	public String libRegConfirmation() {		
 		return "libRegConf";
 	}
 	
+	@GetMapping("/safe")
 	public String safeBook() {
-		return "/safe";
+		return "bookSafe";
 	}
 	
 	@PostMapping ("/safe")
@@ -73,7 +74,7 @@ public class LibraryControl {
 		System.out.println("LibraryControl.safeBookToCatalogue");
 		System.out.println(book);
 		model.put("book", book);
-		return("bookSafe");
+		return("confirmSafe");
 		
 	}
 	
