@@ -39,7 +39,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 			if (noOfBooksOut <3) {
 				noOfBooksOut++;	;
 				//set no of books lent
-				student.setNoOfBooksOut(noOfBooksOut);
+				student.setNoOfBooksOut(noOfBooksOut+1);
 				//set date of loan
 				bookOut.setDateOfLoan(date);
 				student.setDateOfLoan(date);
@@ -47,6 +47,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 				namesOfBooksOut.add(null);
 				
 				if (noOfBooksOut>=3) {
+					bookOut.setBookOut(true); 
 					System.out.println("Limit reached, no additional book loan possible!");	
 				}
 			}

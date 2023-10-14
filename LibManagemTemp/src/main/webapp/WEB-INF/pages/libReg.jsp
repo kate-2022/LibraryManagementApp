@@ -14,7 +14,8 @@
 		
 	<form action="libRegConf" method="GET" >
 		<br>	<br>	<br>	
-		<h1 style="color:blue">--------&nbsp&nbspLibrarian Registration&nbsp&nbsp--------</h1>
+		<center><h1 style="color:blue">--------&nbsp&nbspLibrarian Registration&nbsp&nbsp--------</h1></center>
+
 		<table align="center">
 		 	<tr>
 		 		<td><h4>EMPLOYEE_NO</h4></td>

@@ -62,6 +62,9 @@ public class LibraryControl {
 		return "libRegConf";
 	}
 	
+	public String safeBook() {
+		return "/safe";
+	}
 	
 	@PostMapping ("/safe")
 	public String safeBookToCatalouge(Map<String, Object> model, @ModelAttribute("safeBook") Books book) {
@@ -69,8 +72,7 @@ public class LibraryControl {
 		bookOrga.safeBookToCatalouge(book);
 		System.out.println("LibraryControl.safeBookToCatalogue");
 		System.out.println(book);
-		model.put("next entry", book);
-		
+		model.put("book", book);
 		return("bookSafe");
 		
 	}
