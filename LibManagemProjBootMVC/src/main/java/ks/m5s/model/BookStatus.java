@@ -1,18 +1,31 @@
 package ks.m5s.model;
 
-
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class BookStatus {
 	
 
+	@Id
+	private Integer lentBookId;
+	private Boolean bookOut = false;
+	private LocalDate dateOfLoan= LocalDate.now();
+	private Integer libIdOfStudentLoan;
+	
+	
+	public BookStatus(Books checkBook) {
+	this.lentBookId = checkBook.getBookId();
+	}
 
 	
 //	//default time zone
@@ -23,19 +36,6 @@ public class BookStatus {
 //	
 //	//local date + atStartOfDay() + default time zone + toInstant() = Date
 //	Date dateNow = (Date) Date.from(localDate.atStartOfDay(defaultZoneId).toInstant());
-	
-	@Id
-	private Integer lentBookId;
-	private Boolean bookOut;
-	private LocalDate dateOfLoan= LocalDate.now();
-	private Integer libIdOfStudentLoan;
-	
-//	public BookStatus() {}
-	
-//	public BookStatus(Books checkBook) {
-//		this.lentBookId = book.getBookId();
-//	}
-//	
 	
 	
 	//Displaying LocalDate and Date

@@ -40,25 +40,23 @@ public class BookLendingControll {
 	
 	@PostMapping("/check")
 	public String bookCheckout(Map<String, Object> map, @ModelAttribute("bTrack") Books book) {
-	//	System.out.println("Implementation class is :: " + service.getClass().getName());
  		map.put("bookId", book);
    		map.put("booName", book);
    		map.put("authorLastName", book);
    		map.put("authorFirstName", book);
-   		map.put("ayeraOfPublication", book);
+   		map.put("yearOfPublication", book);
    		service.bookCheckOut(student, bookOut);
 		return "bCheckOut";
 	}
 	
 	@GetMapping("/display")
-	public String displayConfirmation() {
-		
+	public String displayConfirmation() {		
 		return "confirm";
 	}
 	
 	@GetMapping("bookBack")
-	public String bookReturn(Books book) {
-		service.deletBookById(book);
+	public String bookReturn(Integer id) {
+		service.deletBookById(id);
 		return"bReturn";	
 	}
 	

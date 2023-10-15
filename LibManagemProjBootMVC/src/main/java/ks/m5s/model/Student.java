@@ -35,7 +35,7 @@ public class Student implements Serializable {
 	private Integer noOfBooksOut;
 	private LocalDate dateOfLoan;
 	
-	private ArrayList<Books> booksLoan;
+	// private ArrayList<Books> booksLoan;
 	
 
 }

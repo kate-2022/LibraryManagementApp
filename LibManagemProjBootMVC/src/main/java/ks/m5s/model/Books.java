@@ -24,6 +24,7 @@ public class Books {
 	private String bookName;
 	private String authorLastName;
 	private String authorFirstName;
+	private String subjectArea;
 	private Integer yearOfPublication;
 
 	

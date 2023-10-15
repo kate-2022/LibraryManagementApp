@@ -16,7 +16,7 @@ public interface IBookLendingService {
 	
 	public void safeBookToCatalouge(Books book);
 	
-	public void deletBookById(Books book);
+	public void deletBookById(Integer id);
 	
 	public List<Books> displayCatalogue();
 }

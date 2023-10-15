@@ -34,6 +34,9 @@
 					
 				<input type='button' value='Book Return'
 					onclick="window.location.href='/LibManagement/book/bookBack';"/>
+					
+						<input type='button' value='Safe Book '
+					onclick="window.location.href='./safe';"/>
 			    
 
 			</center>

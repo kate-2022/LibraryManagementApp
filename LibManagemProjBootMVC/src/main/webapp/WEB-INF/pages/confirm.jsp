@@ -45,6 +45,10 @@
 					<td><form:input path= 'authorFirstName'/></td>
 				</tr>
 						<tr>
+						<th>Subject Area</th>
+					<td><form:input path= 'subjectArea'/></td>
+				</tr>
+						<tr>
 					<th>Year of Publication</th>
 					<td><form:input path= 'yearOfPublication'/></td>
 				</tr>			

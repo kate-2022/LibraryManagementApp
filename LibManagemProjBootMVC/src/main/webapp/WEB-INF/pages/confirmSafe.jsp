@@ -3,30 +3,32 @@
     
   <!-- <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> --> 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-  
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Search</title>
+<title>Confirm Page</title>
+<style>
+.save {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+</style>
+
 </head>
-<body> 
+<body>
 	<center>
- 
-	<div id="wrapper">
-		<div id= "header">
-			<h2>Library Management - Add Book to Catalogue</h2>
-		</div>
-	
-	</div>
-	
-	<div id="container">
-	<h1 style = 'color:blue; text-align:center'>Safe Book to Catalogue</h1>
-		
-		<form:form action = "safe" method="POST" modelAttribute = "safeBook">
-		
-		<table>	
-			<tbody><tr>
+		 <h1 style='color: red; text-align: center;'>Book Saving </h1>
+
+				<h2>Your book saving to the library catalogue was successful for the following entity:</h2>
+						<h1 style='color: green; text-align: center;'>BOOK DETAILS</h1>
+		  <h1 style ='color:blue; text-align:center'>Book Checkout</h1>
+		  
+			<form:form action = "/home"  method="GET" modelAttribute = "bTrack">
+		<table border='1'>
+			
+				<tr>
 					<th>Book ID</th>
 					<td><form:input path= 'bookId'/></td>
 				</tr>
@@ -42,29 +44,23 @@
 					<th>Author First Name</th>
 					<td><form:input path= 'authorFirstName'/></td>
 				</tr>
-					<tr>
+						<tr>
 					<th>Subject Area</th>
 					<td><form:input path= 'subjectArea'/></td>
 				</tr>
 						<tr>
 					<th>Year of Publication</th>
 					<td><form:input path= 'yearOfPublication'/></td>
+				</tr>			
+				
+				</table>
+			     <tr>
+						<td><input type="text" value="lend" class= "save"/></td>
 				</tr>
-	
-				<tr>
-						<td><input type="submit" value="save" class= "search"/></td>
-				</tr>
-		
-			</tbody>
-		</table>
-		</form:form>
-	</div>	
-	
-	
+
+			</form:form>
+
+
 	</center>
-
-
 </body>
-
-
 </html>
