@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.jmx.export.annotation.ManagedAttribute;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -40,30 +41,30 @@ public class LibraryControl {
 	}
 	
 	@GetMapping("/studReg")
-	public String registerStudent(Student student) {	
+	public String registerStudent(@ModelAttribute ("student")Student student) {	
 		System.out.println("Implementation class is :: " + reg.getClass().getName());
 		String result= reg.registerStudent(student);		
 		return result;
 	}
 	
 	@GetMapping("/studRegConf")
-	public String studRegConfirmation() {		
+	public String studRegConfirmation(@ModelAttribute ("student")Student student) {		
 		return "studRegConf";
 	}
 	
 	@GetMapping("/librReg")
-	public String registerLibrarian(Librarian librarian){
+	public String registerLibrarian(@ModelAttribute ("librarian")Librarian librarian){
 		String outcome = reg.registerLibrarian(librarian);
 		return outcome;
 		}
 	
 	@PostMapping("/libRegConf")
-	public String libRegConfirmation() {		
+	public String libRegConfirmation(@ModelAttribute ("librarian")Librarian librarian) {		
 		return "libRegConf";
 	}
 	
 	@GetMapping("/safe")
-	public String safeBook() {
+	public String safeBook(@ModelAttribute("safeBook") Books book) {
 		return "bookSafe";
 	}
 	
@@ -79,7 +80,7 @@ public class LibraryControl {
 	}
 	
 	@GetMapping("/display")
-	public String displayCatalogue () {	
+	public String displayCatalogue (@ModelAttribute("safeBook") Books book) {	
 		List<Books> books =bookOrga.displayCatalogue();
 		for(Books elem: books) System.out.println(books);
 		return"list displayed";

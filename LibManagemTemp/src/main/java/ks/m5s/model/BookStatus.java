@@ -1,6 +1,5 @@
 package ks.m5s.model;
 
-
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
