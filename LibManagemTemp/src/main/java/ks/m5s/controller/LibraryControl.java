@@ -58,7 +58,7 @@ public class LibraryControl {
 		return outcome;
 		}
 	
-	@PostMapping("/libRegConf")
+	@GetMapping("/libRegConf")
 	public String libRegConfirmation(@ModelAttribute ("librarian")Librarian librarian) {		
 		return "libRegConf";
 	}
