@@ -41,35 +41,50 @@ public class LibraryControl {
 	}
 	
 	@GetMapping("/studReg")
-	public String registerStudent(@ModelAttribute ("student")Student student) {	
+	public String registerStud(@ModelAttribute ("stud")Student student) {	
 		System.out.println("Implementation class is :: " + reg.getClass().getName());
 		String result= reg.registerStudent(student);		
 		return result;
 	}
 	
+	@PostMapping("/studReg")
+	public String registerStudent(@ModelAttribute ("stud")Student student) {	
+		System.out.println("Implementation class is :: " + reg.getClass().getName());
+		String result= reg.registerStudent(student);		
+		return result;
+	}
+	
+	
 	@GetMapping("/studRegConf")
-	public String studRegConfirmation(@ModelAttribute ("student")Student student) {		
+	public String studRegConfirmation(@ModelAttribute ("stud")Student student) {		
 		return "studRegConf";
 	}
 	
+	
 	@GetMapping("/librReg")
-	public String registerLibrarian(@ModelAttribute ("librarian")Librarian librarian){
+	public String registerLib(@ModelAttribute ("lib")Librarian librarian){
+		String outcome = reg.registerLibrarian(librarian);
+		return outcome;
+		}
+	
+	@PostMapping("/librReg")
+	public String registerLibrarian(@ModelAttribute ("lib")Librarian librarian){
 		String outcome = reg.registerLibrarian(librarian);
 		return outcome;
 		}
 	
 	@GetMapping("/libRegConf")
-	public String libRegConfirmation(@ModelAttribute ("librarian")Librarian librarian) {		
+	public String libRegConfirmation(@ModelAttribute ("lib")Librarian librarian) {		
 		return "libRegConf";
 	}
 	
 	@GetMapping("/safe")
-	public String safeBook(@ModelAttribute("safeBook") Books book) {
+	public String safeBook(@ModelAttribute("safeB") Books book) {
 		return "bookSafe";
 	}
 	
 	@PostMapping ("/safe")
-	public String safeBookToCatalouge(Map<String, Object> model, @ModelAttribute("safeBook") Books book) {
+	public String safeBookToCatalouge(Map<String, Object> model, @ModelAttribute("safeB") Books book) {
 		System.out.println("Implementation class is :: " + bookOrga.getClass().getName());
 		bookOrga.safeBookToCatalouge(book);
 		System.out.println("LibraryControl.safeBookToCatalogue");
@@ -80,7 +95,7 @@ public class LibraryControl {
 	}
 	
 	@GetMapping("/display")
-	public String displayCatalogue (@ModelAttribute("safeBook") Books book) {	
+	public String displayCatalogue (@ModelAttribute("safeB") Books book) {	
 		List<Books> books =bookOrga.displayCatalogue();
 		for(Books elem: books) System.out.println(books);
 		return"list displayed";

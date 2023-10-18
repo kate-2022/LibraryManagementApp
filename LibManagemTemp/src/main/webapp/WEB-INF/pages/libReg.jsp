@@ -1,45 +1,45 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
     
-  <!-- <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> --> 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
   
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Librarian Registration</title>
 </head>
 <body bgcolor="lightgreen">
 		
-	<form action="libRegConf" method="GET" >
-		<br>	<br>	<br>	
-		<center><h1 style="color:blue">--------&nbsp&nbsp Librarian Registration &nbsp&nbsp--------</h1></center>
-
-		<table align="center">
-		 	<tr>
-		 		<td><h4>EMPLOYEE_NO</h4></td>
-		 		<td><input type="text" name="emplNo"/></td>
+			<h1 style="color:blue; text-align:center">--------&nbsp&nbsp Librarian Registration &nbsp&nbsp--------</h1></center>
+			<br><br><br>
+	<form:form action="libRegConf" method="GET" modelAttribute="lib" >
+		<center>
+		<table style = align:center>
+			<tbody><tr>
+				<th>EMPLOYEE_NO</th>
+		 		<td><form:input path='emplNo'/></td>
 		 	</tr>
 				<tr>
-				<td><h4>LAST_NAME</h4></td>
-		 		<td><input type="text" name="lastName"/></td>
+				<th>LAST_NAME</th>
+					<td><form:input path='lastName'/></td>
 		 	</tr>
 		 		<tr>
-		 		<td><h4>FIRST_NAME</h4></td>
-		 		<td><input type="text" name="firstName"/></td>
+		 		<th>FIRST_NAME</th>
+					<td><form:input path='firstName'/></td>
 		 	</tr>
 				<tr>
-				<td><h4>Date_of_Birth</h4></td>
-		 		<td><input type="date" name="doB"/></td>
+				<th>Date_of_Birth</th>
+					<td><form:input path='doB' type = "date"/></td>
 		 	</tr>
 				<tr>
 		 		<td></td>
 		 		<td><input type="submit" value="save"/></td>
 		 	</tr>
-		
+			</tbody>
 		</table>
-   </form>
+		</center>
+   </form:form>
 </body>
 
 </html>

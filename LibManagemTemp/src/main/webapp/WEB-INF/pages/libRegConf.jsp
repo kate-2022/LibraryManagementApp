@@ -10,23 +10,25 @@
 </head>
 <body bgcolor="lightblue">
 	<br/><br/>
+	<h1 style="color:blue; text-align:center;">Librarian Registration Confirmation</h1>
+	<center>
 		<table border='1'>
 			<tr>
 				<th>Employee No</th>
-				<td>${librarian.emplNo}</td>
+				<td>${lib.emplNo}</td>
 			</tr>
 			<tr>
 				<th>First Name</th>
-				<td>${librarian.firstName}</td>
+				<td>${lib.firstName}</td>
 			</tr>
 			<tr>
 				<th>Last Name</th>
-				<td>${librarian.lastName}</td>
+				<td>${lib.lastName}</td>
 			</tr>
 			<tr>
 				<th>Date of Birth</th>
-				<td>${librarian.doB}</td>
+				<td>${lib.doB}</td>
 			</tr>
 		</table>
-</body>
+</center>
 </html>
