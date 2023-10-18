@@ -13,7 +13,7 @@
 		
 			<h1 style="color:blue; text-align:center">--------&nbsp&nbsp Librarian Registration &nbsp&nbsp--------</h1></center>
 			<br><br><br>
-	<form:form action="libRegConf" method="GET" modelAttribute="lib" >
+	<form:form action="libReg" method="GET" modelAttribute="lib" >
 		<center>
 		<table style = align:center>
 			<tbody><tr>
@@ -40,6 +40,7 @@
 		</table>
 		</center>
    </form:form>
+ 
 </body>
 
 </html>

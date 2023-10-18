@@ -27,46 +27,46 @@ public class BookLendingControll {
 	
 	// private Boolean bookOut;
 	
+	// log 1-5
+	
 	@GetMapping("/search")
 	public String findABook(@ModelAttribute ("bTrack") Books book) {
 		System.out.println("Implementation class is :: " + service.getClass().getName());
+		System.out.println("findABook() _GetMapping method was called - log1");
 		return "bookSearch";
 	}
     
 	@GetMapping("/check")
 	public String bookCheck(@ModelAttribute("bTrack") Books book) {
+		System.out.println("bookCeckout() _GetMapping method was called - log2");
 		return"bCheckOut";
 	}
 	
 	@PostMapping("/check")
 	public String bookCheckout(Map<String, Object> map, @ModelAttribute("bTrack") Books book) {
+		System.out.println("bookCeckout() _PostMapping method was called - log3a");
  		map.put("bookId", book);
    		map.put("booName", book);
    		map.put("authorLastName", book);
    		map.put("authorFirstName", book);
    		map.put("yearOfPublication", book);
    		service.bookCheckOut(student, bookOut);
+   		System.out.println("bookCeckout() _PostMapping method was called - log3b");
 		return "bCheckOut";
 	}
 	
 	@GetMapping("/display")
-	public String displayConfirmation() {		
+	public String displayConfirmation() {	
+		System.out.println("displayConfirmation() _GetMapping method was called - log4");
 		return "confirm";
 	}
 	
 	@GetMapping("bookBack")
 	public String bookReturn(Integer id) {
 		service.deletBookById(id);
+		System.out.println("bookReturn() _GetMapping method was called - log5");
 		return"bReturn";	
 	}
-	
-	
-	
-	
-//	@GetMapping("/home")
-//	public String showStartPage() {	
-//		return "choose";
-//	}
 	
 	
 }

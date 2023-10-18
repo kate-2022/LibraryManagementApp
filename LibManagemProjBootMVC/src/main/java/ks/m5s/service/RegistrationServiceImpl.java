@@ -19,17 +19,18 @@ public class RegistrationServiceImpl implements IRegistrationService {
 	@Autowired
 	private IStudentDao repoStud;
 	
+	// log 13-18
 
 	@Override
-	public String registerLibrarian(Librarian librarian) {		
+	public void registerLibrarian(Librarian librarian) {		
 		repoLib.save(librarian);
-		return "libReg";
+		System.out.println("registerLibrarian()-ServiceImpl_service method was called - log 13");
 	}
 	
 	@Override
-	public String registerStudent(Student student) {
+	public void registerStudent(Student student) {
 		repoStud.save(student);
-		return "studentReg";
+		System.out.println("registerStudent()-ServiceImpl_service method was called - log 14");
 	}
 
 
@@ -37,24 +38,26 @@ public class RegistrationServiceImpl implements IRegistrationService {
 	@Override
 	public void deleteLibrAccountById(int id) {
 		repoLib.deleteById(id);
-		System.out.println("Librarian according id" + id + "was deleted successfully.");
+		System.out.println("Librarian according id" + id + "was deleted successfully. - log 15");
 	}
 	
 	
 	@Override
 	public void deleteStudAccount(int id) {
 		repoStud.deleteById(id);
-		System.out.println("Student according id" + id + "was deleted successfully.");
+		System.out.println("Student according id" + id + "was deleted successfully. - log 16");
 		
 	}
 
 	@Override
 	public String confirmLibReg() {
+		System.out.println("confirmLibReg()_ service method was called - log 17");
 		return "libRegConf";
 	}
 
 	@Override
 	public String confirmStudReg() {
+		System.out.println("confirmStudReg()_ service method was called - log 18");
 		return "studRegConf";
 	}
 

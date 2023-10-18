@@ -7,18 +7,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Librarian Registration</title>
+<title>Student Registration</title>
 </head>
 <body bgcolor="lightgreen">
-		
-			<h1 style="color:blue; text-align:center">--------&nbsp&nbsp Librarian Registration &nbsp&nbsp--------</h1></center>
+			<h1 style="color:blue; text-align:center;">--------&nbsp&nbsp Student Registration &nbsp&nbsp--------</h1></center>
 			<br><br><br>
-	<form:form action="libReg" method="GET" modelAttribute="lib" >
-		<center>
-		<table style = align:center>
-			<tbody><tr>
-				<th>EMPLOYEE_NO</th>
-		 		<td><form:input path='emplNo'/></td>
+	<form:form action="studReg" method="GET" modelAttribute="stud">
+	 <center>                      
+		<table>
+		 <tr>
+		 		<th>ENROLLMENT_NO</th>
+		 		<td><form:input path='enrolNo'/></td>
 		 	</tr>
 				<tr>
 				<th>LAST_NAME</th>
@@ -35,12 +34,10 @@
 				<tr>
 		 		<td></td>
 		 		<td><input type="submit" value="save"/></td>
-		 	</tr>
-			</tbody>
+		 	</tr>			
 		</table>
-		</center>
+   </center>
    </form:form>
- 
+  
 </body>
-
 </html>

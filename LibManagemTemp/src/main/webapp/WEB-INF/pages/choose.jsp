@@ -19,7 +19,7 @@
 					onclick="window.location.href='./studReg';"/> 
 					
 				<input type='button' value='Librarian Registration'
-					onclick="window.location.href='./librReg';"/>
+					onclick="window.location.href='./libReg';"/>
 				
 		 	 	<br>	<br>		
 			    
