@@ -10,17 +10,25 @@
 </head>
 <body bgcolor="lightblue">
 	<br/><br/>
-	<c:choose>
-	 	<c:when test="${status eq 'success'}">
-	 		<h1 style='color:green'; text-align: center'>
-	 			Registration completed successfully
-            </h1>
-       </c:when>
-       <c:otherwise>
-       		<h1 style='color:green'; text-align: center'>
-	 			Registration not successful
-            </h1>
-       </c:otherwise>
-     </c:choose>
-</body>
+	<h1 style="color:blue; text-align:center;">Student Registration Confirmation</h1>
+	<center>
+		<table border='1'>
+			<tr>
+				<th>Enrollment No</th>
+				<td>${stud.enrolNo}</td>
+			</tr>
+			<tr>
+				<th>First Name</th>
+				<td>${stud.firstName}</td>
+			</tr>
+			<tr>
+				<th>Last Name</th>
+				<td>${stud.lastName}</td>
+			</tr>
+			<tr>
+				<th>Date of Birth</th>
+				<td>${stud.doB}</td>
+			</tr>
+		</table>
+</center>
 </html>

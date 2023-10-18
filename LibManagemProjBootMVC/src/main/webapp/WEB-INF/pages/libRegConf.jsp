@@ -10,17 +10,25 @@
 </head>
 <body bgcolor="lightblue">
 	<br/><br/>
-	<c:choose>
-	 	<c:when test="${status eq 'success'}">
-	 		<h1 style='color:green'; text-align: center'>
-	 			Registration completed successfully
-            </h1>
-       </c:when>
-       <c:otherwise>
-       		<h1 style='color:green'; text-align: center'>
-	 			Registration not successful
-            </h1>
-       </c:otherwise>
-     </c:choose>
-</body>
+	<h1 style="color:blue; text-align:center;">Librarian Registration Confirmation</h1>
+	<center>
+		<table border='1'>
+			<tr>
+				<th>Employee No</th>
+				<td>${lib.emplNo}</td>
+			</tr>
+			<tr>
+				<th>First Name</th>
+				<td>${lib.firstName}</td>
+			</tr>
+			<tr>
+				<th>Last Name</th>
+				<td>${lib.lastName}</td>
+			</tr>
+			<tr>
+				<th>Date of Birth</th>
+				<td>${lib.doB}</td>
+			</tr>
+		</table>
+</center>
 </html>
