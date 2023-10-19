@@ -13,13 +13,14 @@
 		
 			<h1 style="color:blue; text-align:center">--------&nbsp&nbsp Librarian Registration &nbsp&nbsp--------</h1></center>
 			<br><br><br>
-	<form:form action="libReg" method="GET" modelAttribute="lib" >
+	<form:form  modelAttribute="lib" >
 		<center>
 		<table style = align:center>
 			<tbody><tr>
 				<th>EMPLOYEE_NO</th>
 		 		<td><form:input path='emplNo'/></td>
 		 	</tr>
+
 				<tr>
 				<th>LAST_NAME</th>
 					<td><form:input path='lastName'/></td>
