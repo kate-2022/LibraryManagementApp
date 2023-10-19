@@ -25,7 +25,7 @@
 						<h1 style='color: green; text-align: center;'>BOOK DETAILS</h1>
 		  <h1 style ='color:blue; text-align:center'>Book Checkout</h1>
 		  
-			<form:form action = "/home"  method="GET" modelAttribute = "bTrack">
+			<form:form modelAttribute = "bTrack">
 		<table border='1'>
 			
 				<tr>

@@ -12,7 +12,7 @@
 <body bgcolor="lightgreen">
 			<h1 style="color:blue; text-align:center;">--------&nbsp&nbsp Student Registration &nbsp&nbsp--------</h1></center>
 			<br><br><br>
-	<form:form action="studReg" method="GET" modelAttribute="stud">
+	<form:form modelAttribute="stud">
 	 <center>                      
 		<table>
 		 <tr>
