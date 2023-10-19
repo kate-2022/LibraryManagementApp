@@ -32,8 +32,6 @@ public class RegistrationServiceImpl implements IRegistrationService {
 		repoStud.save(student);
 		System.out.println("registerStudent()-ServiceImpl_service method was called - log 14");
 	}
-
-
 	
 	@Override
 	public void deleteLibrAccountById(int id) {

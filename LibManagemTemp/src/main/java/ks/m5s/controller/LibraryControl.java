@@ -44,8 +44,8 @@ public class LibraryControl {
 	
 	@GetMapping("/studReg")
 	public String registerStud(@ModelAttribute ("stud")Student student) {	
-		System.out.println("Implementation class is :: " + reg.getClass().getName());
-		reg.registerStudent(student);		
+		System.out.println("Implementation class of IRegistrationService is :: " + reg.getClass().getName());
+	//	reg.registerStudent(student);		
 		System.out.println("registerStudent() _GetMapping method was called - log6a");
 		return "studReg";
 	}
@@ -67,8 +67,8 @@ public class LibraryControl {
 	
 	@GetMapping("/libReg")
 	public String registerLib(@ModelAttribute ("lib")Librarian librarian){
-		System.out.println("Implementation class is :: " + reg.getClass().getName());
-		reg.registerLibrarian(librarian);
+		System.out.println("Implementation class of IRegistrationService is :: " + reg.getClass().getName());
+	//	reg.registerLibrarian(librarian);
 		System.out.println("registerLibrarian() _GetMapping method was called - log8a");
 		return "libReg";
 		}
@@ -94,7 +94,7 @@ public class LibraryControl {
 	
 	@PostMapping ("/safe")
 	public String safeBookToCatalouge(Map<String, Object> model, @ModelAttribute("safeB") Books book) {
-		System.out.println("Implementation class is :: " + bookOrga.getClass().getName());
+		System.out.println("Implementation class of IBookLendingService is :: " + bookOrga.getClass().getName());
 		bookOrga.safeBookToCatalouge(book);
 		System.out.println("LibraryControl.safeBookToCatalogue()_PostMapping method was called - log 11a");
 		System.out.println(book);
