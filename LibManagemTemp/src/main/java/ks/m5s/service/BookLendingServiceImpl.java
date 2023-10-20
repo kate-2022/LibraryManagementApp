@@ -32,6 +32,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	
 	@Override
 	public int bookCheckOut(Student student, BookStatus bookOut) {
+		System.out.println("bookCheckOut()-ServiceImpl_service method was called - log19a");
 		
 		boolean available = bookOut.getBookOut();
 		if(available) {
@@ -52,6 +53,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 				}
 			}
 		}	
+		System.out.println("bookCheckOut()-ServiceImpl_service method was called - log19b");
 		return noOfBooksOut;
 		
 	}
@@ -59,12 +61,14 @@ public class BookLendingServiceImpl implements IBookLendingService{
 
 	@Override
 	public List<Books> namesOfBooksOut() {
+		System.out.println("namesOfBooksOut()-ServiceImpl_service method was called - log20");
 		return (List<Books>) repoBooks.findAll();
 	}
 
 	@Override
 	public List<Books> getBooks(Integer bookId) {
 		Optional<Books> optional = repoBooks.findById(bookId);
+		System.out.println("getBooks()-ServiceImpl_service method was called - log21");
 		return (List<Books>) optional.get();		
 		
 	}
@@ -73,6 +77,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	@Override
 	public void safeBookToCatalouge(Books book) {
 	repoBooks.save(book);
+	System.out.println("safeBookToCatalougue()-ServiceImpl_service method was called - log22");
 		
 	}
 
@@ -80,6 +85,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	@Override
 	public List<Books> displayCatalogue() {
 		catalogue=(List<Books>)repoBooks.findAll();	
+		System.out.println("displayCatalogue()-ServiceImpl_service method was called - log23");
 		return catalogue;
 	}
 
@@ -87,6 +93,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	@Override
 	public void deletBookById(Integer id) {
 		repoBooks.deleteById(id);
+		System.out.println("deleteBooksById()-ServiceImpl_service method was called - log24");
 	}
 
 

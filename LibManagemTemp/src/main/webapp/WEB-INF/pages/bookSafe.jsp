@@ -23,7 +23,7 @@
 	<div id="container">
 	<h1 style = 'color:blue; text-align:center'>Safe Book to Catalogue</h1>
 		
-		<form:form action = "safe" method="POST" modelAttribute = "safeB">
+		<form:form  modelAttribute = "safeB">
 		<table>	
 			<tbody><tr>
 					<th>Book ID</th>
@@ -56,7 +56,10 @@
 		
 			</tbody>
 		</table>
-		</form:form>
+		
+			<input type='button' value='Back to Home'
+					onclick="window.location.href='/LibManagement/lib/home';"/>  	
+		
 	</div>	
 	
 	

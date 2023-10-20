@@ -17,13 +17,12 @@
 </style>
 
 </head>
-<body>
+<body bgcolor="lightblue">
 	<center>
-		 <h1 style='color: red; text-align: center;'>Book Checkout </h1>
+		 <h1 style='color: blue; text-align: center;'>Book Checkout </h1>
 
-				<h2>Your book checkout was successful for the following entity:</h2>
-						<h1 style='color: green; text-align: center;'>BOOK DETAILS</h1>
-		  <h1 style ='color:blue; text-align:center'>Book Checkout</h1>
+				<h2>Your book checkout was successful for following entity:</h2>
+						<h3 style='color: green; text-align: center;'>BOOK DETAILS</h3>
 		  
 			<form:form modelAttribute = "bTrack">
 		<table border='1'>
@@ -60,7 +59,8 @@
 
 			</form:form>
 
-
+				<input type='button' value='Back to Home'
+					onclick="window.location.href='/LibManagement/lib/home';"/>  	
 	</center>
 </body>
 </html>

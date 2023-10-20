@@ -39,6 +39,9 @@
 		 	</tr>
 			</tbody>
 		</table>
+		
+				<input type='button' value='Back to Home'
+					onclick="window.location.href='./home';"/>
 		</center>
    </form:form>
  

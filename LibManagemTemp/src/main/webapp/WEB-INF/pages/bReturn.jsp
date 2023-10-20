@@ -6,9 +6,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Book Return</title>
 </head>
 <body>
 
+
+			<input type='button' value='Back to Home'
+					onclick="window.location.href='/LibManagement/lib/home';"/>  	
 </body>
 </html>

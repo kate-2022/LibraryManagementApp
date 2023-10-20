@@ -11,39 +11,34 @@
 </head>
 <body bgcolor="lightblue">
 	<center>
-	
-	<div id="wrapper">
-		<div id= "header">
 			<h2>Library Management - Book CheckOut</h2>
-		</div>
-	
-	<div id="container">
+
 		<h1 style ='color:blue; text-align:center'>Book Checkout</h1>
-			<form:form action = "display"  method="GET" modelAttribute = "bTrack">
+			<form:form modelAttribute = "bTrack">
 				<table>
-				<tr>
+				<tr>			
 					<th>Book ID</th>
-					<td><form:input path= 'bookId'/></td>
+					<td>${book.bookId}</td>
 				</tr>
-						<tr>
+				<tr>			
 					<th>Book Name</th>
-					<td><form:input path= 'bookName'/></td>
+					<td>${book.bookName}</td>
 				</tr>
-						<tr>
+				<tr>			
 					<th>Author Last Name</th>
-					<td><form:input path= 'authorLastName'/></td>
+					<td>${book.authorLastName}</td>
 				</tr>
-						<tr>
+				<tr>			
 					<th>Author First Name</th>
-					<td><form:input path= 'authorFirstName'/></td>
-				</tr>
-						<tr>
+					<td>${book.authorFirstName}</td>
+				</tr>		
+				<tr>			
 					<th>Subject Area</th>
-					<td><form:input path= 'subjectArea'/></td>
-				</tr>
-						<tr>
+					<td>${book.subjectArea}</td>
+				</tr>	
+				<tr>			
 					<th>Year of Publication</th>
-					<td><form:input path= 'yearOfPublication'/></td>
+					<td>${book.yearOfPublication}</td>
 				</tr>			
 				
 				</table>
@@ -52,9 +47,10 @@
 				</tr>
 
 			</form:form>
-		</div>
+			
+				<input type='button' value='Back to Home'
+					onclick="window.location.href='/LibManagement/lib/home';"/>  	
 	</center>
 
-		
 </body>
 </html>

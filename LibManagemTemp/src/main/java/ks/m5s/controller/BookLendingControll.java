@@ -32,17 +32,24 @@ public class BookLendingControll {
 	@GetMapping("/search")
 	public String findABook(@ModelAttribute ("bTrack") Books book) {
 		System.out.println("Implementation class is :: " + service.getClass().getName());
-		System.out.println("findABook() _GetMapping method was called - log1");
+		System.out.println("findABook() _GetMapping method was called - log1a");
 		return "bookSearch";
 	}
+	
+	@PostMapping("/search")
+	public String findBook(@ModelAttribute ("bTrack") Books book) {
+		System.out.println("Implementation class is :: " + service.getClass().getName());
+		System.out.println("findABook() _PostMapping method was called - log1b");
+		return "saving";
+	}
     
-	@GetMapping("/check")
+	@GetMapping("/lend")
 	public String bookCheck(@ModelAttribute("bTrack") Books book) {
 		System.out.println("bookCeckout() _GetMapping method was called - log2");
 		return"bCheckOut";
 	}
 	
-	@PostMapping("/check")
+	@PostMapping("/lend")
 	public String bookCheckout(Map<String, Object> map, @ModelAttribute("bTrack") Books book) {
 		System.out.println("bookCeckout() _PostMapping method was called - log3a");
  		map.put("bookId", book);

@@ -30,7 +30,7 @@
 					onclick="window.location.href='/LibManagement/book/search';"/>
 					
 				<input type='button' value='Book CheckOut'
-					onclick="window.location.href='/LibManagement/book/check';"/>
+					onclick="window.location.href='/LibManagement/book/lend';"/>
 					
 				<input type='button' value='Book Return'
 					onclick="window.location.href='/LibManagement/book/bookBack';"/>
