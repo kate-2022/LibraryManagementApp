@@ -30,5 +30,8 @@
 				<td>${lib.doB}</td>
 			</tr>
 		</table>
+		
+		<input type='button' value='Back to Home'
+					onclick="window.location.href='./home';"/>
 </center>
 </html>
