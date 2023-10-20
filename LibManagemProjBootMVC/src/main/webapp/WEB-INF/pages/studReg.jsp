@@ -14,8 +14,8 @@
 			<br><br><br>
 	<form:form modelAttribute="stud">
 	 <center>                      
-		<table>
-		 <tr>
+		<table style =align:center>
+		 <tbody><tr>
 		 		<th>ENROLLMENT_NO</th>
 		 		<td><form:input path='enrolNo'/></td>
 		 	</tr>
@@ -34,7 +34,8 @@
 				<tr>
 		 		<td></td>
 		 		<td><input type="submit" value="save"/></td>
-		 	</tr>			
+		 	</tr>	
+		 	</tbody>		
 		</table>
    </center>
    </form:form>
