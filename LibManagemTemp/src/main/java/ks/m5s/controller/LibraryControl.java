@@ -44,23 +44,16 @@ public class LibraryControl {
 	
 	@GetMapping("/studReg")
 	public String registerStud(@ModelAttribute ("stud")Student student) {	
-		System.out.println("Implementation class of IRegistrationService is :: " + reg.getClass().getName());
-	//	reg.registerStudent(student);		
-		System.out.println("registerStudent() _GetMapping method was called - log6a");
+		System.out.println("Implementation class of IRegistrationService is :: " + reg.getClass().getName());	
+		System.out.println("registerStudent() _GetMapping method was called - log6");
 		return "studReg";
 	}
 	
 	@PostMapping("/studReg")
 	public String registerStudent(@ModelAttribute ("stud")Student student) {	
+		System.out.println("registerStudent() _PostMapping method was called - log 7a");
 		reg.registerStudent(student);		
-		System.out.println("registerStudent() _PostMapping method was called - log 6b");
-		return "studRegConf";
-	}
-	
-	
-	@GetMapping("/studRegConf")
-	public String studRegConfirmation(@ModelAttribute ("stud")Student student) {
-		System.out.println("studRegConfirmation() _GetMapping method was called - log7");
+		System.out.println("registerStudent() _PostMapping method was called - log 7b");
 		return "studRegConf";
 	}
 	
@@ -68,23 +61,17 @@ public class LibraryControl {
 	@GetMapping("/libReg")
 	public String registerLib(@ModelAttribute ("lib")Librarian librarian){
 		System.out.println("Implementation class of IRegistrationService is :: " + reg.getClass().getName());
-	//	reg.registerLibrarian(librarian);
-		System.out.println("registerLibrarian() _GetMapping method was called - log8a");
+		System.out.println("registerLibrarian() _GetMapping method was called - log8");
 		return "libReg";
 		}
 	
 	@PostMapping("/libReg")
 	public String registerLibrarian(@ModelAttribute ("lib")Librarian librarian){
+		System.out.println("registerLibrarian() _PostMapping method was called - log 9a");
 		reg.registerLibrarian(librarian);
-		System.out.println("registerLibrarian() _PostMapping method was called - log 8b");
+		System.out.println("registerLibrarian() _PostMapping method was called - log 9b");
 		return "libRegConf";
 		}
-	
-	@GetMapping("/libRegConf")
-	public String libRegConfirmation(@ModelAttribute ("lib")Librarian librarian) {	
-		System.out.println("libRegConfirmation() _GetMapping method was called - log 9");
-		return "libRegConf";
-	}
 	
 	@GetMapping("/safe")
 	public String safeBook(@ModelAttribute("safeB") Books book) {
