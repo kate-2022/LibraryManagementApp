@@ -31,10 +31,10 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	private IStudentDao repoStud;
 	
 	@Override
-	public int bookCheckOut(Student student, BookStatus bookOut) {
+	public int bookCheckOut(Student student, Books book) {
 		System.out.println("bookCheckOut()-ServiceImpl_service method was called - log19a");
 		
-		boolean available = bookOut.getBookOut();
+		boolean available = book.getBookStatus();
 		if(available) {
 			noOfBooksOut = student.getNoOfBooksOut();
 			if (noOfBooksOut <3) {
@@ -42,13 +42,12 @@ public class BookLendingServiceImpl implements IBookLendingService{
 				//set no of books lent
 				student.setNoOfBooksOut(noOfBooksOut+1);
 				//set date of loan
-				bookOut.setDateOfLoan(date);
-				student.setDateOfLoan(date);
+				book.setDateOfLoan(date);
+				book.setDateOfLoan(date);
 				// add Book to List of Books out
 				namesOfBooksOut.add(null);
 				
 				if (noOfBooksOut>=3) {
-					bookOut.setBookOut(true); 
 					System.out.println("Limit reached, no additional book loan possible!");	
 				}
 			}

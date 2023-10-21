@@ -11,10 +11,10 @@
 </head>
 <body bgcolor="lightblue"> 
 	<center>
- 
-	<div id="wrapper">
+ 		<div id="wrapper">
 		<div id= "header">
 			<h2>Library Management - Book Search</h2>
+
 		</div>
 	
 	</div>
@@ -48,7 +48,7 @@
 					<th>Year of Publication</th>
 					<td><form:input path= 'yearOfPublication'/></td>
 				</tr>
-	
+		
 				<tr>
 					  <td><input type="submit" value="search" class= "search"/></td>
 				</tr>
@@ -59,10 +59,8 @@
 		
 							<input type='button' value='Back to Home'
 					onclick="window.location.href='/LibManagement/lib/home';"/>  	
-	
-	</div>
+		</div>	
 	</center>
-
 
 </body>
 

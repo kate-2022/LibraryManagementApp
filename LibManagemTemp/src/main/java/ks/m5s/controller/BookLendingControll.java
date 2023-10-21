@@ -44,8 +44,14 @@ public class BookLendingControll {
 	}
     
 	@GetMapping("/lend")
-	public String bookCheck(@ModelAttribute("bTrack") Books book) {
+	public String bookCheck(Map<String, Object> map, @ModelAttribute("bTrack") Books book) {
 		System.out.println("bookCeckout() _GetMapping method was called - log2");
+		map.put("bookId", book);
+   		map.put("booName", book);
+   		map.put("authorLastName", book);
+   		map.put("authorFirstName", book);
+   		map.put("yearOfPublication", book);
+   		service.bookCheckOut(student, book);
 		return"bCheckOut";
 	}
 	
@@ -57,7 +63,7 @@ public class BookLendingControll {
    		map.put("authorLastName", book);
    		map.put("authorFirstName", book);
    		map.put("yearOfPublication", book);
-   		service.bookCheckOut(student, bookOut);
+   		service.bookCheckOut(student, book);
    		System.out.println("bookCeckout() _PostMapping method was called - log3b");
 		return "bCheckOut";
 	}

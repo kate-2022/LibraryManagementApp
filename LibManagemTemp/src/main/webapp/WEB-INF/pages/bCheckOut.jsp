@@ -14,7 +14,7 @@
 			<h2>Library Management - Book CheckOut</h2>
 
 		<h1 style ='color:blue; text-align:center'>Book Checkout</h1>
-			<form:form modelAttribute = "bTrack">
+
 				<table>
 				<tr>			
 					<th>Book ID</th>
@@ -39,14 +39,17 @@
 				<tr>			
 					<th>Year of Publication</th>
 					<td>${book.yearOfPublication}</td>
-				</tr>			
+				</tr>	
+						<tr>			
+					<th>Date of Loan</th>
+					<td>${book.dateOfLoan}</td>
+				</tr>		
 				
-				</table>
 			     <tr>
 						<td><input type="submit" value="lend" class= "save"/></td>
 				</tr>
+				</table>
 
-			</form:form>
 			
 				<input type='button' value='Back to Home'
 					onclick="window.location.href='/LibManagement/lib/home';"/>  	

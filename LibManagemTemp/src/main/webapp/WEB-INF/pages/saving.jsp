@@ -15,7 +15,7 @@
 	<center>
 		 <h1 style='color: blue; text-align: center;'>Book Search </h1>
 
-				<h2>Do you want to save the following book for checkout:</h2>
+				<h2>Save the following book for checkout:</h2>
 						<h3 style='color: green; text-align: center;'>BOOK DETAILS</h3>
 		  
 			<form:form modelAttribute = "bTrack">
@@ -44,7 +44,15 @@
 						<tr>
 					<th>Year of Publication</th>
 					<td><form:input path= 'yearOfPublication'/></td>
-				</tr>			
+				</tr>		
+							<tr>
+					<th>Book available</th>
+					<td><form:input path= 'bookStatus'/></td>
+				</tr>	
+										<tr>
+					<th>Date of Loan</th>
+					<td><form:input path= 'dateOfLoan'/></td>
+				</tr>
 				
 				</table>
 

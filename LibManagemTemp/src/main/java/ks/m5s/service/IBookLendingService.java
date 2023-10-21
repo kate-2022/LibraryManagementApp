@@ -10,7 +10,7 @@ public interface IBookLendingService {
 
 	public List <Books> namesOfBooksOut();
 		
-	public int bookCheckOut(Student student, BookStatus bookOut);
+	public int bookCheckOut(Student student, Books book);
 
 	public List<Books> getBooks(Integer bookId);
 	
