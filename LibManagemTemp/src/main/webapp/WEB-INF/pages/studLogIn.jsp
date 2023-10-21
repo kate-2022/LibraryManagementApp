@@ -7,35 +7,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Student Registration</title>
+<title>Student LogIn</title>
 </head>
 <body bgcolor="lightgreen">
-			<h1 style="color:blue; text-align:center;">--------&nbsp&nbsp Student Registration &nbsp&nbsp--------</h1></center>
+			<h1 style="color:blue; text-align:center;">--------&nbsp&nbsp Student LogIn &nbsp&nbsp--------</h1></center>
 			<br><br><br>
 	<form:form modelAttribute="stud">
 	 <center>                      
 		<table style =align:center>
-		 <tbody><tr>
-		 		<th>ENROLLMENT_NO</th>
-		 		<td><form:input path='enrolNo'/></td>
-		 	</tr>
+		 <tbody>
 				<tr>
 				<th>LAST_NAME</th>
 					<td><form:input path='lastName'/></td>
 		 	</tr>
-		 		<tr>
-		 		<th>FIRST_NAME</th>
-					<td><form:input path='firstName'/></td>
+		 	
+				<tr>
+				<th>Password</th>
+					<td><form:input path='password' type = "password"/></td>
 		 	</tr>
 				<tr>
-				<th>Date_of_Birth</th>
-					<td><form:input path='doB' type = "date"/></td>
-		 	</tr>
-		 	<tr>
-		 	<th>Set Password</th>
-		 		<td><form:input path='password' type = "password"/></td>
-		 	</tr>
-			<tr>	
+		 		<td></td>
 		 		<td><input type="submit" value="save"/></td>
 		 	</tr>	
 		 	

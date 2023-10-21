@@ -7,6 +7,10 @@ import ks.m5s.model.Books;
 import ks.m5s.model.Student;
 
 public interface IBookLendingService {
+	
+	public String studentLogIn();
+	
+	public String librarianLogIn();
 
 	public List <Books> namesOfBooksOut();
 		

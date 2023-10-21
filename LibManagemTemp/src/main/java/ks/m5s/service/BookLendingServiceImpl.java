@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import ks.m5s.dao.IBooksDao;
 import ks.m5s.dao.IStudentDao;
-import ks.m5s.model.BookStatus;
 import ks.m5s.model.Books;
 import ks.m5s.model.Student;
 import lombok.Data;
@@ -29,6 +28,17 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	
 	@Autowired
 	private IStudentDao repoStud;
+	
+	@Override
+	public String studentLogIn() {
+		return "studLogIn";	
+	}
+	
+	
+	@Override
+	public String librarianLogIn() {
+		return "libLogIn";
+	}
 	
 	@Override
 	public int bookCheckOut(Student student, Books book) {
@@ -96,5 +106,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	}
 
 
+		
+	}
 
-}
+
