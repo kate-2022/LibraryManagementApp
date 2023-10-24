@@ -35,22 +35,22 @@ public class LibraryControl {
 	private IRegistrationService reg;
 	
 
-	// log 6-12
+	// log 6-12 + log 100-1003
 	
 	@GetMapping("/home")
 	public String showStartPage() {	
-		return "choose";
+		return "entry";
 	}
 	
 	@GetMapping("/studReg")
-	public String registerStud(@ModelAttribute ("stud")Student student) {	
+	public String registerStud(@ModelAttribute ("studReg")Student student) {	
 		System.out.println("Implementation class of IRegistrationService is :: " + reg.getClass().getName());	
 		System.out.println("registerStudent() _GetMapping method was called - log6");
 		return "studReg";
 	}
 	
 	@PostMapping("/studReg")
-	public String registerStudent(@ModelAttribute ("stud")Student student) {	
+	public String registerStudent(@ModelAttribute ("studReg")Student student) {	
 		System.out.println("registerStudent() _PostMapping method was called - log 7a");
 		reg.registerStudent(student);		
 		System.out.println("registerStudent() _PostMapping method was called - log 7b");
@@ -59,19 +59,47 @@ public class LibraryControl {
 	
 	
 	@GetMapping("/libReg")
-	public String registerLib(@ModelAttribute ("lib")Librarian librarian){
+	public String registerLib(@ModelAttribute ("libReg")Librarian librarian){
 		System.out.println("Implementation class of IRegistrationService is :: " + reg.getClass().getName());
 		System.out.println("registerLibrarian() _GetMapping method was called - log8");
 		return "libReg";
 		}
 	
 	@PostMapping("/libReg")
-	public String registerLibrarian(@ModelAttribute ("lib")Librarian librarian){
+	public String registerLibrarian(@ModelAttribute ("libReg")Librarian librarian){
 		System.out.println("registerLibrarian() _PostMapping method was called - log 9a");
 		reg.registerLibrarian(librarian);
 		System.out.println("registerLibrarian() _PostMapping method was called - log 9b");
 		return "libRegConf";
 		}
+	
+	@GetMapping("studLog")
+	public String studentLogIn(@ModelAttribute ("studLog") Student stud) {
+		System.out.println("studentLogIn()_GetMapping method was called - log 100");
+		return "studLogIn";
+	}
+	
+	@PostMapping("studLog")
+	public String studLogin(Map<String, Object> map, @ModelAttribute ("studLog") Student stud) {
+		map.put("enrolNo", stud.getEnrolNo());
+		map.put("password",stud.getPassword());
+		System.out.println("Map is going to be printed: "+ map);		
+		System.out.println("studLogin()_PostMapping method was called - log 101");
+		return"";
+	}
+	
+	@GetMapping("libLog")
+	public String librarianLogIn(@ModelAttribute("libLog") Librarian lib) {
+		System.out.println("librarianLogIn()_GetMapping method was called - log 102");
+		return "libLogIn";
+	}
+	
+	@PostMapping("libLog")
+	public String libLogin(@ModelAttribute ("libLog") Librarian lib) {
+		System.out.println("libLogin()_PostMapping method was called - log 103");
+		
+		return"chooseInd";
+	}
 	
 	@GetMapping("/safe")
 	public String safeBook(@ModelAttribute("safeB") Books book) {
@@ -86,7 +114,7 @@ public class LibraryControl {
 		System.out.println("LibraryControl.safeBookToCatalogue()_PostMapping method was called - log 11a");
 		System.out.println(book);
 		model.put("book", book);
-		System.out.println("LibraryControl.safeBookToCatalogue()_PostMapping method was called - log 1b");
+		System.out.println("LibraryControl.safeBookToCatalogue()_PostMapping method was called - log 11b");
 		return("confirmSafe");
 		
 	}

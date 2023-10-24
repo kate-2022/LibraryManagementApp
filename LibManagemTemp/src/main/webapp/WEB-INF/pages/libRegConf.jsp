@@ -15,19 +15,19 @@
 		<table border='1'>
 			<tr>
 				<th>Employee No</th>
-				<td>${lib.emplNo}</td>
+				<td>${libReg.emplNo}</td>
 			</tr>
 			<tr>
 				<th>First Name</th>
-				<td>${lib.firstName}</td>
+				<td>${libReg.firstName}</td>
 			</tr>
 			<tr>
 				<th>Last Name</th>
-				<td>${lib.lastName}</td>
+				<td>${libReg.lastName}</td>
 			</tr>
 			<tr>
 				<th>Date of Birth</th>
-				<td>${lib.doB}</td>
+				<td>${libReg.doB}</td>
 			</tr>
 		</table>
 		

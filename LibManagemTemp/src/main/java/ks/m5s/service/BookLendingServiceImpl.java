@@ -3,6 +3,7 @@ package ks.m5s.service;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,8 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	private Integer noOfBooksOut;
 	private List <String> namesOfBooksOut;
 	private List<Books>catalogue;
+	Scanner scan = new Scanner(System.in);
+	private char[]pw;
 	
 	@Autowired
 	private IBooksDao repoBooks;
@@ -30,8 +33,13 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	private IStudentDao repoStud;
 	
 	@Override
-	public String studentLogIn() {
-		return "studLogIn";	
+	public String studentLogIn(Student student) {
+		System.out.println("Please enter your password"); // NOT console based!!
+	   pw = scan.next().toCharArray();  // ..
+	   if (pw.equals(student.getPassword())) {
+		   return "pwSuccess";			   
+	   }
+		return"pwFail";
 	}
 	
 	

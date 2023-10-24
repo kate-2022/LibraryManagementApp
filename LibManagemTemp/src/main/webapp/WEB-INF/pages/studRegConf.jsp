@@ -15,19 +15,19 @@
 		<table border='1'>
 			<tr>
 				<th>Enrollment No</th>
-				<td>${stud.enrolNo}</td>
+				<td>${studReg.enrolNo}</td>
 			</tr>
 			<tr>
 				<th>First Name</th>
-				<td>${stud.firstName}</td>
+				<td>${studReg.firstName}</td>
 			</tr>
 			<tr>
 				<th>Last Name</th>
-				<td>${stud.lastName}</td>
+				<td>${studReg.lastName}</td>
 			</tr>
 			<tr>
 				<th>Date of Birth</th>
-				<td>${stud.doB}</td>
+				<td>${studReg.doB}</td>
 			</tr>
 		</table>
 		

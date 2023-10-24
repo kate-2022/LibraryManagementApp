@@ -26,5 +26,7 @@ public class Librarian implements Serializable {
 	private String firstName;
 	private String lastName;
 	private Date doB;
+	private char[] password;
+//	private Date entryDate;
 
 }

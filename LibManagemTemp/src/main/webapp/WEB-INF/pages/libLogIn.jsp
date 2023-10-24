@@ -10,15 +10,15 @@
 <title>Student LogIn</title>
 </head>
 <body bgcolor="lightgreen">
-			<h1 style="color:blue; text-align:center;">--------&nbsp&nbsp Student LogIn &nbsp&nbsp--------</h1></center>
+			<h1 style="color:blue; text-align:center;">--------&nbsp&nbsp Librarian LogIn &nbsp&nbsp--------</h1></center>
 			<br><br><br>
-	<form:form modelAttribute="studLog">
+	<form:form modelAttribute="libLog">
 	 <center>                      
 		<table style =align:center>
 		 <tbody>
-	 			<tr>
-				<th>ENROLLMENT_NO</th>
-					<td><form:input path='enrolNo'/></td>
+		 			<tr>
+				<th>EMPLOYEE_NO</th>
+					<td><form:input path='emplNo'/></td>
 		 	</tr>
 		 	
 				<tr>

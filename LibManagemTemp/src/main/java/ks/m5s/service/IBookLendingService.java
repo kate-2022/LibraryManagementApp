@@ -8,7 +8,8 @@ import ks.m5s.model.Student;
 
 public interface IBookLendingService {
 	
-	public String studentLogIn();
+	
+	String studentLogIn(Student student);
 	
 	public String librarianLogIn();
 

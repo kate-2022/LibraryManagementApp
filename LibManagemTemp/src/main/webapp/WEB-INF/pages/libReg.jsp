@@ -13,7 +13,7 @@
 		
 			<h1 style="color:blue; text-align:center">--------&nbsp&nbsp Librarian Registration &nbsp&nbsp--------</h1></center>
 			<br><br><br>
-	<form:form  modelAttribute="lib" >
+	<form:form  modelAttribute="libReg" >
 		<center>
 		<table style = align:center>
 			<tbody><tr>
@@ -33,8 +33,11 @@
 				<th>Date_of_Birth</th>
 					<td><form:input path='doB' type = "date"/></td>
 		 	</tr>
+		 		 	<tr>
+		 	<th>Set Password</th>
+		 		<td><form:input path='password' type = "password"/></td>
+		 	</tr>
 				<tr>
-		 		<td></td>
 		 		<td><input type="submit" value="save"/></td>
 		 	</tr>
 			</tbody>
