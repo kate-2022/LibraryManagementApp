@@ -11,10 +11,10 @@
 </head>
 <body bgcolor="lightblue"> 
 	<center>
- 
-	<div id="wrapper">
+ 		<div id="wrapper">
 		<div id= "header">
 			<h2>Library Management - Book Search</h2>
+
 		</div>
 	
 	</div>
@@ -22,7 +22,7 @@
 	<div id="container">
 	<h1 style = 'color:blue; text-align:center'>Book Search</h1>
 		
-		<form:form action ="check" method="POST" modelAttribute = "bTrack">
+		<form:form modelAttribute = "bTrack">
 		<table>	
 			<tbody><tr>
 					<th>Book ID</th>
@@ -48,7 +48,7 @@
 					<th>Year of Publication</th>
 					<td><form:input path= 'yearOfPublication'/></td>
 				</tr>
-	
+		
 				<tr>
 					  <td><input type="submit" value="search" class= "search"/></td>
 				</tr>
@@ -57,13 +57,10 @@
 		</table>
 	  </form:form>
 		
-			<!--		<input type='button' value='search'
-					onclick="window.location.href='bCheckOut'; return false;"
-					class="search" /> -->	
-	
-	</div>
+							<input type='button' value='Back to Home'
+					onclick="window.location.href='/LibManagement/lib/home';"/>  	
+		</div>	
 	</center>
-
 
 </body>
 

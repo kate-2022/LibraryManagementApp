@@ -9,23 +9,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Confirm Page</title>
-<style>
-.save {
-  background-color: blue;
-  color: white;
-  padding: 10px;
-</style>
 
 </head>
-<body>
+<body bgcolor="lightblue">
 	<center>
-		 <h1 style='color: red; text-align: center;'>Book Saving </h1>
+		 <h1 style='color: blue; text-align: center;'>Book Search </h1>
 
-				<h2>Your book saving to the library catalogue was successful for the following entity:</h2>
-						<h1 style='color: green; text-align: center;'>BOOK DETAILS</h1>
-		  <h1 style ='color:blue; text-align:center'>Book Checkout</h1>
+				<h2>Save the following book for checkout:</h2>
+						<h3 style='color: green; text-align: center;'>BOOK DETAILS</h3>
 		  
-			<form:form  modelAttribute = "bTrack">
+			<form:form modelAttribute = "bTrack">
 		<table border='1'>
 			
 				<tr>
@@ -45,23 +38,29 @@
 					<td><form:input path= 'authorFirstName'/></td>
 				</tr>
 						<tr>
-					<th>Subject Area</th>
+						<th>Subject Area</th>
 					<td><form:input path= 'subjectArea'/></td>
 				</tr>
 						<tr>
 					<th>Year of Publication</th>
 					<td><form:input path= 'yearOfPublication'/></td>
-				</tr>			
+				</tr>		
+							<tr>
+					<th>Book available</th>
+					<td><form:input path= 'bookStatus'/></td>
+				</tr>	
+										<tr>
+					<th>Date of Loan</th>
+					<td><form:input path= 'dateOfLoan'/></td>
+				</tr>
 				
 				</table>
-			     <tr>
-						<td><input type="text" value="lend" class= "save"/></td>
-				</tr>
 
 			</form:form>
-			<input type='button' value='Back to Home'
+					<input type='button' value='save'
+					onclick="window.location.href='/LibManagement/book/lend';"/>  	
+				<input type='button' value='Back to Home'
 					onclick="window.location.href='/LibManagement/lib/home';"/>  	
-
 	</center>
 </body>
 </html>

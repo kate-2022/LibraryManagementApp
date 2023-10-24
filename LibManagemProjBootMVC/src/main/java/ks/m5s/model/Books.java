@@ -1,5 +1,7 @@
 package ks.m5s.model;
 
+import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,6 +28,8 @@ public class Books {
 	private String authorFirstName;
 	private String subjectArea;
 	private Integer yearOfPublication;
+	private Boolean bookStatus = true;
+	private LocalDate dateOfLoan = LocalDate.now();
 
 	
 

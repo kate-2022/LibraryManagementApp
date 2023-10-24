@@ -32,8 +32,8 @@ public class Student implements Serializable {
 	private String firstName;
 	private String lastName;
 	private Date doB;
-	private Integer noOfBooksOut;
-	private LocalDate dateOfLoan;
+	private char[] password;
+	private Integer noOfBooksOut =0;
 	
 	// private ArrayList<Books> booksLoan;
 	
