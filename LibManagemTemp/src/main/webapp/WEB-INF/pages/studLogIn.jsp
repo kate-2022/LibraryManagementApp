@@ -16,9 +16,9 @@
 	 <center>                      
 		<table style =align:center>
 		 <tbody>
-	 			<tr>
-				<th>ENROLLMENT_NO</th>
-					<td><form:input path='enrolNo'/></td>
+	 		 <tr>
+		 		<th>E-Mail</th>
+					<td><form:input path='eMail' type = "email"/></td>
 		 	</tr>
 		 	
 				<tr>

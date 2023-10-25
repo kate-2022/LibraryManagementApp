@@ -35,7 +35,7 @@ public class LibraryControl {
 	private IRegistrationService reg;
 	
 
-	// log 6-12 + log 100-1003
+	// log 6-12 + log 100-103
 	
 	@GetMapping("/home")
 	public String showStartPage() {	
