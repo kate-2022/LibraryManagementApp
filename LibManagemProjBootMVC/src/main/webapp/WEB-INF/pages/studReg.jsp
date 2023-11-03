@@ -31,6 +31,10 @@
 				<th>Date_of_Birth</th>
 					<td><form:input path='doB' type = "date"/></td>
 		 	</tr>
+		 			<tr>
+		 		<th>E-Mail</th>
+					<td><form:input path='eMail' type = "email"/></td>
+		 	</tr>
 		 	<tr>
 		 	<th>Set Password</th>
 		 		<td><form:input path='password' type = "password"/></td>

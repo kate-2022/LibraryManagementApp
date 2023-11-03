@@ -35,7 +35,7 @@ public class LibraryControl {
 	private IRegistrationService reg;
 	
 
-	// log 6-12 + log 100-1003
+	// log 6-12 + log 100-103
 	
 	@GetMapping("/home")
 	public String showStartPage() {	
@@ -85,7 +85,7 @@ public class LibraryControl {
 		map.put("password",stud.getPassword());
 		System.out.println("Map is going to be printed: "+ map);		
 		System.out.println("studLogin()_PostMapping method was called - log 101");
-		return"";
+		return"";  // what .jsp to return
 	}
 	
 	@GetMapping("libLog")
