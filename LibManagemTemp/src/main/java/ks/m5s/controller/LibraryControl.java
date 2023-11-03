@@ -39,7 +39,7 @@ public class LibraryControl {
 	
 	@GetMapping("/home")
 	public String showStartPage() {	
-		return "entry";
+		return "home";
 	}
 	
 	@GetMapping("/studReg")

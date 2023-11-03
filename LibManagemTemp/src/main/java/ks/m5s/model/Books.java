@@ -6,32 +6,33 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 //import ks.m5s.service.BookStatus;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//@Component
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Books {
 	
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer bookId;
+	@NotNull
 	private String bookName;
+	@NotNull
 	private String authorLastName;
 	private String authorFirstName;
 	private String subjectArea;
+	@NotNull
 	private Integer yearOfPublication;
-	private Boolean bookStatus = true;
+	@NotNull
+	private Boolean bookStatus = false;
 	private LocalDate dateOfLoan = LocalDate.now();
-
-	
-
+	private Long libIdOfLoan;
 
 }
