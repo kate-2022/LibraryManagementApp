@@ -85,7 +85,7 @@ public class LibraryControl {
 		map.put("password",stud.getPassword());
 		System.out.println("Map is going to be printed: "+ map);		
 		System.out.println("studLogin()_PostMapping method was called - log 101");
-		return"";
+		return"";  // what .jsp to return
 	}
 	
 	@GetMapping("libLog")
