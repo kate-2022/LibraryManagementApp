@@ -28,14 +28,18 @@ public class SecurityConfigApp {
 	}
 	
 	@Bean
-	public SecurityFilterChain customFilterChain(HttpSecurity http) throws Exception {
+	public SecurityFilterChain configure(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests(
-				request -> request.antMatchers("/lib", "/lib/home","/lib//studReg","/lib/stuLog", "/lib/libReg","/lib/libLog",
+				request -> request.antMatchers("/","/index.jsp","/lib", "/lib/home","/lib//studReg","/lib/stuLog", "/lib/libReg","/lib/libLog",
 						"/lib/display","/book", "/book/search" ).permitAll()
 				.antMatchers("/lib/safe").hasRole("LIBRARIAN")
 				.antMatchers("/book/lend", "/book/display", "/book/bookBack").hasAnyRole("STUDENT", "LIBRARIAN")
 				.anyRequest().authenticated()
-				).formLogin();	
+				).formLogin()
+				.and().rememberMe()
+				.and().logout()
+				.and().sessionManagement().maximumSessions(3)
+				.maxSessionsPreventsLogin(true);	
 		return http.build();
 	}
 	

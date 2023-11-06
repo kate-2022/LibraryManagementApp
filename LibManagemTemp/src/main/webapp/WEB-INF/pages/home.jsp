@@ -10,32 +10,30 @@
 <title>Library Overview</title>
 </head>
 <body bgcolor="lightblue">
-			<center> 
 			
-				<h1 style="color:blue;">Registration</h1> 
-				<h2 style="color:green;">Please Choose an Option  </h2>
-				<br>				
-				<input type='button' value='Student Registration'
+			
+				<h1 style="color:blue;text-align:center;">Registration</h1> 
+				<h2 style="color:green;text-align:center;">Please Choose an Option  </h2>
+				<br>		
+				<center>
+				<input type='button' value='Student Registration' 
 					onclick="window.location.href='./studReg';"/> 
 					
-				<input type='button' value='Librarian Registration'
+				<input type='button' value='Librarian Registration' 
 					onclick="window.location.href='./libReg';"/>
-				
+					</center>				
 		 	 	<br>	<br>		
 			    
-			    <h1 style="color:blue;">LogIn</h1> 
-			   	<h2 style="color:green;">Please Choose an Option  </h2>
+			    <h1 style="color:blue; text-align:center;">LogIn</h1> 
+			   	<h2 style="color:green;text-align:center;">Please Choose an Option  </h2>
 				<br>
+				<center>
 				<input type='button' value='Student Login'
 					onclick="window.location.href='/LibManagement/lib/studLog';"/>
 					
 				<input type='button' value='Librarian Login'
 					onclick="window.location.href='/LibManagement/lib/libLog';"/>
-					
-		
-			    
-
-			</center>
+				</center>						
 
 </body>
 </html>
