@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import ks.m5s.model.BookStatus;
 import ks.m5s.model.Books;
 import ks.m5s.model.Student;
 import ks.m5s.service.IBookLendingService;
@@ -20,7 +19,6 @@ import ks.m5s.service.IBookLendingService;
 public class BookLendingControll {
 	
 	Student student; 
-	BookStatus bookOut;
 	
 	@Autowired
 	private IBookLendingService service;

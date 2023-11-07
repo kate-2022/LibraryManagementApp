@@ -11,8 +11,8 @@
 <body bgcolor="lightblue">
 	<br/><br/>
 	<h1 style="color:blue; text-align:center;">Student Registration Confirmation</h1>
-	<center>
-		<table border='1'>
+
+		<table border='1' style= align:center>
 			<tr>
 				<th>Enrollment No</th>
 				<td>${studReg.enrolNo}</td>
@@ -29,10 +29,14 @@
 				<th>Date of Birth</th>
 				<td>${studReg.doB}</td>
 			</tr>
+					<tr>
+				<th>e-mail</th>
+				<td>${studReg.eMail}</td>
+			</tr>
 		</table>
 		
 				<input type='button' value='Back to Home'
 					onclick="window.location.href='./home';"/>
 			    
-</center>
+
 </html>
