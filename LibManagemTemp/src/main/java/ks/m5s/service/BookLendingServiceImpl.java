@@ -83,7 +83,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	}
 
 	@Override
-	public List<Books> getBooks(Integer bookId) {
+	public List<Books> getBooks(Long bookId) {
 		Optional<Books> optional = repoBooks.findById(bookId);
 		System.out.println("getBooks()-ServiceImpl_service method was called - log21");
 		return (List<Books>) optional.get();		
@@ -108,7 +108,7 @@ public class BookLendingServiceImpl implements IBookLendingService{
 
 
 	@Override
-	public void deletBookById(Integer id) {
+	public void deletBookById(Long id) {
 		repoBooks.deleteById(id);
 		System.out.println("deleteBooksById()-ServiceImpl_service method was called - log24");
 	}

@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import ks.m5s.model.Books;
 
-public interface IBooksDao extends CrudRepository<Books, Integer> {
+public interface IBooksDao extends CrudRepository<Books, Long> {
 
 }

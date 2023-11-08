@@ -21,7 +21,7 @@ public class Books {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer bookId;
+	private Long bookId;
 	@NotNull
 	private String bookName;
 	@NotNull

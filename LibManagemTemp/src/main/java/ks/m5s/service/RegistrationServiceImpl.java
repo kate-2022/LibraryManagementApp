@@ -34,14 +34,14 @@ public class RegistrationServiceImpl implements IRegistrationService {
 	}
 	
 	@Override
-	public void deleteLibrAccountById(int id) {
+	public void deleteLibrAccountById(Long id) {
 		repoLib.deleteById(id);
 		System.out.println("Librarian according id" + id + "was deleted successfully. - log 15");
 	}
 	
 	
 	@Override
-	public void deleteStudAccount(int id) {
+	public void deleteStudAccount(Long id) {
 		repoStud.deleteById(id);
 		System.out.println("Student according id" + id + "was deleted successfully. - log 16");
 		
