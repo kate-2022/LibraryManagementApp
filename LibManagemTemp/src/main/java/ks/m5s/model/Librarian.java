@@ -41,7 +41,7 @@ public class Librarian implements Serializable {
 	@Size(min= 6)
 	private String password;
 	@NotNull
-	@Email
+// 	@Email
 	private String eMail;
 	
 	@OneToOne (mappedBy = "librarian", cascade = CascadeType.ALL)

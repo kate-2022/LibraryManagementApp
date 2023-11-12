@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import ks.m5s.model.Books;
 import ks.m5s.model.Librarian;
 import ks.m5s.model.Student;
+import ks.m5s.service.EmailValidator;
 import ks.m5s.service.IBookLendingService;
 import ks.m5s.service.IRegistrationService;
 
@@ -52,6 +53,9 @@ public class LibraryControl {
 	@PostMapping("/studReg")
 	public String registerStudent(@ModelAttribute ("studReg")Student student) {	
 		System.out.println("registerStudent() _PostMapping method was called - log 7a");
+		String email= student.getEMail();
+		boolean check=EmailValidator.isValid(email);
+		if (check)
 		reg.registerStudent(student);		
 		System.out.println("registerStudent() _PostMapping method was called - log 7b");
 		return "studRegConf";
@@ -68,6 +72,9 @@ public class LibraryControl {
 	@PostMapping("/libReg")
 	public String registerLibrarian(@ModelAttribute ("libReg")Librarian librarian){
 		System.out.println("registerLibrarian() _PostMapping method was called - log 9a");
+		String email= librarian.getEMail();
+		boolean check=EmailValidator.isValid(email);
+		if (check)
 		reg.registerLibrarian(librarian);
 		System.out.println("registerLibrarian() _PostMapping method was called - log 9b");
 		return "libRegConf";

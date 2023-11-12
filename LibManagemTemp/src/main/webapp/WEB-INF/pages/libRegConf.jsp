@@ -29,6 +29,10 @@
 				<th>Date of Birth</th>
 				<td>${libReg.doB}</td>
 			</tr>
+				<tr>
+				<th>E-mail</th>
+				<td>${libReg.eMail}</td>
+			</tr>
 		</table>
 		
 		<input type='button' value='Back to Home'
