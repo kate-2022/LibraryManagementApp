@@ -16,11 +16,11 @@ public interface IBookLendingService {
 		
 	public int bookCheckOut(Student student, Books book);
 
-	public List<Books> getBooks(Integer bookId);
+	public List<Books> getBooks(Long bookId);
 	
 	public void safeBookToCatalouge(Books book);
 	
-	public void deletBookById(Integer id);
+	public void deletBookById(Long id);
 	
 	public List<Books> displayCatalogue();
 }

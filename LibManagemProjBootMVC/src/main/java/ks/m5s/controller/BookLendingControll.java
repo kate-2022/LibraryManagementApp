@@ -73,7 +73,7 @@ public class BookLendingControll {
 	}
 	
 	@GetMapping("bookBack")
-	public String bookReturn(Integer id) {
+	public String bookReturn(Long id) {
 		service.deletBookById(id);
 		System.out.println("bookReturn() _GetMapping method was called - log5");
 		return"bReturn";	

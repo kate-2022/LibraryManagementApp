@@ -13,9 +13,9 @@ public interface IRegistrationService {
 	
 	public String confirmStudReg();
 	
-	public void deleteLibrAccountById(int id);
+	public void deleteLibrAccountById(Long id);
 	
-	public void deleteStudAccount(int id);
+	public void deleteStudAccount(Long id);
 
 	
 }

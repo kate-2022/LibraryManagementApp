@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Student LogIn</title>
+<title>Librarian LogIn</title>
 </head>
 <body bgcolor="lightgreen">
 			<h1 style="color:blue; text-align:center;">--------&nbsp&nbsp Librarian LogIn &nbsp&nbsp--------</h1></center>

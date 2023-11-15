@@ -33,7 +33,7 @@
 		 	</tr>
 		 			<tr>
 		 		<th>E-Mail</th>
-					<td><form:input path='eMail' type ='e-mail'/></td>
+					<td><form:input path='eMail' type ='email'/></td>
 		 	</tr>
 		 	<tr>
 		 	<th>Set Password</th>
