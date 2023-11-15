@@ -20,7 +20,6 @@
 		 		<th>E-Mail</th>
 					<td><form:input path='eMail' type = "email"/></td>
 		 	</tr>
-		 	
 				<tr>
 				<th>Password</th>
 					<td><form:input path='password' type = "password"/></td>

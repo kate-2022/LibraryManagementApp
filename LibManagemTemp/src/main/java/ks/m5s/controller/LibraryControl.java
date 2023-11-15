@@ -87,12 +87,12 @@ public class LibraryControl {
 	}
 	
 	@PostMapping("studLog")
-	public String studLogin(Map<String, Object> map, @ModelAttribute ("studLog") Student stud) {
-		map.put("enrolNo", stud.getEnrolNo());
-		map.put("password",stud.getPassword());
-		System.out.println("Map is going to be printed: "+ map);		
+	public String studLogin(@ModelAttribute ("studLog") Student stud) {  //Map<String, Object> map,
+//		map.put("enrolNo", stud.getEnrolNo());
+//		map.put("password",stud.getPassword());
+//		System.out.println("Map is going to be printed: "+ map);		
 		System.out.println("studLogin()_PostMapping method was called - log 101");
-		return"";  // what .jsp to return
+		return"chooseInd";  
 	}
 	
 	@GetMapping("libLog")

@@ -48,7 +48,7 @@ public class Student implements Serializable {
 	private String password;
 	private int enabled;
 	@NotNull
-// 	@Email
+	@Email
 	private String eMail;
 	private Integer noOfBooksOut =0;
 	
