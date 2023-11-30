@@ -8,6 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import lombok.AllArgsConstructor;
 //import ks.m5s.service.BookStatus;
 import lombok.Data;
@@ -17,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Books {
+public class Books implements Comparable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,5 +37,16 @@ public class Books {
 	private Boolean bookStatus = false;
 	private LocalDate dateOfLoan = LocalDate.now();
 	private Long libIdOfLoan;
+	
+	int i;
+	
+	@Override
+	public int compareTo(Object o) {
+		return i;
+	}
+	
+	
+	
+	//private Logger logger = LoggerFactory.getLogger(Books.class);
 
 }

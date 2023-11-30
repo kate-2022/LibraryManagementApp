@@ -2,8 +2,6 @@ package ks.m5s.model;
 
 import java.io.Serializable;
 import java.sql.Date;
-import java.time.LocalDate;
-import java.util.ArrayList;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -18,7 +16,8 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import org.springframework.stereotype.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import lombok.Data;
 import lombok.Getter;
@@ -46,16 +45,18 @@ public class Student implements Serializable {
 	@NotEmpty
 	@Size(min= 6)
 	private String password;
-	private int enabled;
-	@NotNull
-	@Email
+//	@NotNull
+//	@Email
 	private String eMail;
-	private Integer noOfBooksOut =0;
+	private Integer noOfBooksOut =0;	
+	private int enabled;
 	
-	@OneToOne (mappedBy ="student", cascade = CascadeType.ALL)
-	@PrimaryKeyJoinColumn
-	private Authorities authorities;
-	 
+//	@OneToOne (mappedBy ="student", cascade = CascadeType.ALL)
+//	@PrimaryKeyJoinColumn
+//	private Authorities authorities;
+	
+	
+//	private Logger logger = LoggerFactory.getLogger(Student.class);
 	
 	// private ArrayList<Books> booksLoan;
 	

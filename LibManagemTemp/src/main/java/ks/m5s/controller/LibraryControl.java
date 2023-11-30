@@ -6,14 +6,18 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.jmx.export.annotation.ManagedAttribute;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ks.m5s.model.Books;
+import ks.m5s.model.Catalouge;
 import ks.m5s.model.Librarian;
 import ks.m5s.model.Student;
 import ks.m5s.service.EmailValidator;
@@ -35,6 +39,8 @@ public class LibraryControl {
 	@Autowired
 	private IRegistrationService reg;
 	
+	
+	private Logger logger = LoggerFactory.getLogger(LibraryControl.class);
 
 	// log 6-12 + log 100-103
 	
@@ -46,18 +52,20 @@ public class LibraryControl {
 	@GetMapping("/studReg")
 	public String registerStud(@ModelAttribute ("studReg")Student student) {	
 		System.out.println("Implementation class of IRegistrationService is :: " + reg.getClass().getName());	
-		System.out.println("registerStudent() _GetMapping method was called - log6");
+		logger.info("registerStudent() _GetMapping method was called - log 6 ");
 		return "studReg";
 	}
 	
+	
 	@PostMapping("/studReg")
 	public String registerStudent(@ModelAttribute ("studReg")Student student) {	
-		System.out.println("registerStudent() _PostMapping method was called - log 7a");
-		String email= student.getEMail();
-		boolean check=EmailValidator.isValid(email);
-		if (check)
+		logger.info("entering registerStudent() _PostMapping method - log 7a");
+		String eMail= student.getEMail();
+		System.out.println(eMail);
+		//boolean check=EmailValidator.isValid(eMail);
+		//if (check)
 		reg.registerStudent(student);		
-		System.out.println("registerStudent() _PostMapping method was called - log 7b");
+		logger.info("leaving registerStudent() _PostMapping method - log 7b");
 		return "studRegConf";
 	}
 	
@@ -65,52 +73,53 @@ public class LibraryControl {
 	@GetMapping("/libReg")
 	public String registerLib(@ModelAttribute ("libReg")Librarian librarian){
 		System.out.println("Implementation class of IRegistrationService is :: " + reg.getClass().getName());
-		System.out.println("registerLibrarian() _GetMapping method was called - log8");
+		logger.info("registerLibrarian() _GetMapping method was called - log 8");
 		return "libReg";
 		}
 	
 	@PostMapping("/libReg")
 	public String registerLibrarian(@ModelAttribute ("libReg")Librarian librarian){
-		System.out.println("registerLibrarian() _PostMapping method was called - log 9a");
+		logger.info("entering registerLibrarian() _PostMapping method - log 9a");
 		String email= librarian.getEMail();
-		boolean check=EmailValidator.isValid(email);
-		if (check)
+		System.out.println(email);
+//		boolean check=EmailValidator.isValid(email);
+//		if (check)
 		reg.registerLibrarian(librarian);
-		System.out.println("registerLibrarian() _PostMapping method was called - log 9b");
+		logger.info("leaving registerLibrarian() _PostMapping method- log 9b");
 		return "libRegConf";
 		}
 	
-	@GetMapping("studLog")
+	@GetMapping("/studLog")
 	public String studentLogIn(@ModelAttribute ("studLog") Student stud) {
-		System.out.println("studentLogIn()_GetMapping method was called - log 100");
+		logger.info("studentLogIn()_GetMapping method was called - log 100");
 		return "studLogIn";
 	}
 	
-	@PostMapping("studLog")
+	@PostMapping("/studLog")
 	public String studLogin(@ModelAttribute ("studLog") Student stud) {  //Map<String, Object> map,
 //		map.put("enrolNo", stud.getEnrolNo());
 //		map.put("password",stud.getPassword());
 //		System.out.println("Map is going to be printed: "+ map);		
-		System.out.println("studLogin()_PostMapping method was called - log 101");
-		return"chooseInd";  
+		logger.info("studLogin()_PostMapping method was called - log 101");
+		return"chooseStud";  
 	}
 	
-	@GetMapping("libLog")
+	@GetMapping("/libLog")
 	public String librarianLogIn(@ModelAttribute("libLog") Librarian lib) {
-		System.out.println("librarianLogIn()_GetMapping method was called - log 102");
+		logger.info("librarianLogIn()_GetMapping method was called - log 102");
 		return "libLogIn";
 	}
 	
-	@PostMapping("libLog")
+	@PostMapping("/libLog")
 	public String libLogin(@ModelAttribute ("libLog") Librarian lib) {
-		System.out.println("libLogin()_PostMapping method was called - log 103");
+		logger.info("libLogin()_PostMapping method was called -log 103");
 		
-		return"chooseInd";
+		return"chooseLib";
 	}
 	
 	@GetMapping("/safe")
 	public String safeBook(@ModelAttribute("safeB") Books book) {
-		System.out.println("safeBook() _GetMapping method was called - log 10");
+		logger.info("safeBook() _GetMapping method was called - 10");
 		return "bookSafe";
 	}
 	
@@ -118,19 +127,20 @@ public class LibraryControl {
 	public String safeBookToCatalouge(Map<String, Object> model, @ModelAttribute("safeB") Books book) {
 		System.out.println("Implementation class of IBookLendingService is :: " + bookOrga.getClass().getName());
 		bookOrga.safeBookToCatalouge(book);
-		System.out.println("LibraryControl.safeBookToCatalogue()_PostMapping method was called - log 11a");
+		logger.info("entering LibraryControl.safeBookToCatalogue()_PostMapping method - log 11a");
 		System.out.println(book);
 		model.put("book", book);
-		System.out.println("LibraryControl.safeBookToCatalogue()_PostMapping method was called - log 11b");
+		logger.info("leaving LibraryControl.safeBookToCatalogue()_PostMapping method - log 11b");
 		return("confirmSafe");
 		
 	}
 	
 	@GetMapping("/display")
-	public String displayCatalogue (@ModelAttribute("safeB") Books book) {	
-		List<Books> books =bookOrga.displayCatalogue();
-		for(Books elem: books) System.out.println(books);
-		System.out.println("displayCatalogue()_GetMapping method was called - log 12");
+	public String displayCatalogue (@ModelAttribute("safeB") Catalouge catalogue) {	
+		Catalouge books = bookOrga.displayCatalogue();
+		List <Books> booky = catalogue.establishCatalouge();
+		booky.forEach(System.out::println);
+		logger.info("displayCatalogue()_GetMapping method was called - log 12");
 		return"list displayed";
 	}
 	

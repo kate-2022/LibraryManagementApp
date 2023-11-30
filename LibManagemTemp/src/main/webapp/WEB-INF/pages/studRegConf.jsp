@@ -18,21 +18,18 @@
 				<td>${studReg.enrolNo}</td>
 			</tr>
 			<tr>
-				<th>First Name</th>
-				<td>${studReg.firstName}</td>
-			</tr>
-			<tr>
 				<th>Last Name</th>
 				<td>${studReg.lastName}</td>
+			</tr>
+			<tr>
+				<th>First Name</th>
+				<td>${studReg.firstName}</td>
 			</tr>
 			<tr>
 				<th>Date of Birth</th>
 				<td>${studReg.doB}</td>
 			</tr>
-			<tr>
-				<th>E-mail</th>
-				<td>${studReg.eMail}</td>
-			</tr>
+	
 		</table>
 		
 				<input type='button' value='Back to Home'

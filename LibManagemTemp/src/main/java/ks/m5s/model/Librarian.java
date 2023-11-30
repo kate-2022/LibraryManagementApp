@@ -15,6 +15,9 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -41,12 +44,15 @@ public class Librarian implements Serializable {
 	@Size(min= 6)
 	private String password;
 	@NotNull
-// 	@Email
+ 	@Email
 	private String eMail;
 	
-	@OneToOne (mappedBy = "librarian", cascade = CascadeType.ALL)
-	@PrimaryKeyJoinColumn
-	private Authorities authorities;
+//
+//	@OneToOne (mappedBy = "librarian", cascade = CascadeType.ALL)
+//	@PrimaryKeyJoinColumn
+//	private Authorities authorities;
+	
+//	private Logger logger = LoggerFactory.getLogger(Librarian.class);
 	
 //	private Date entryDate;
 

@@ -3,6 +3,7 @@ package ks.m5s.service;
 import java.util.List;
 
 import ks.m5s.model.Books;
+import ks.m5s.model.Catalouge;
 import ks.m5s.model.Student;
 
 public interface IBookLendingService {
@@ -22,5 +23,5 @@ public interface IBookLendingService {
 	
 	public void deletBookById(Long id);
 	
-	public List<Books> displayCatalogue();
+	public Catalouge displayCatalogue();
 }

@@ -12,7 +12,7 @@
 <body bgcolor="lightgreen">
 			<h1 style="color:blue; text-align:center;">--------&nbsp&nbsp Librarian LogIn &nbsp&nbsp--------</h1></center>
 			<br><br><br>
-	<form:form modelAttribute="libLog">
+	<form:form modelAttribute="libLog"> <%--modelAttribute, NOT end point , NOT .jsp file--%>
 	 <center>                      
 		<table style =align:center>
 		 <tbody>

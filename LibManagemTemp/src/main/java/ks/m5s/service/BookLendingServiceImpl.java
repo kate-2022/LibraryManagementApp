@@ -5,24 +5,28 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ks.m5s.dao.IBooksDao;
+import ks.m5s.dao.ICatalogueDao;
 import ks.m5s.dao.IStudentDao;
 import ks.m5s.model.Books;
+import ks.m5s.model.Catalouge;
 import ks.m5s.model.Student;
 import lombok.Data;
 
 @Service
 @Data
-public class BookLendingServiceImpl implements IBookLendingService{
+public class BookLendingServiceImpl implements IBookLendingService {
 	
 	public LocalDate date = LocalDate.now();
 	
 	private Integer noOfBooksOut;
-	private List <String> namesOfBooksOut;
-	private List<Books>catalogue;
+	private List <Books>BooksOut;
+	private Catalouge catalogue;
 	Scanner scan = new Scanner(System.in);
 	private char[]pw;
 	
@@ -31,6 +35,13 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	
 	@Autowired
 	private IStudentDao repoStud;
+	
+	@Autowired 
+	private ICatalogueDao repoCat;
+	
+	private Logger logger = LoggerFactory.getLogger(BookLendingServiceImpl.class);
+	
+	// log 19 -24
 	
 	@Override
 	public String studentLogIn(Student student) {
@@ -48,9 +59,12 @@ public class BookLendingServiceImpl implements IBookLendingService{
 		return "libLogIn";
 	}
 	
+	
+	
 	@Override
 	public int bookCheckOut(Student student, Books book) {
-		System.out.println("bookCheckOut()-ServiceImpl_service method was called - log19a");
+		
+		logger.info("bookCheckOut()-ServiceImpl_service method was called - log19a");
 		
 		boolean available = book.getBookStatus();
 		if(available) {
@@ -63,14 +77,14 @@ public class BookLendingServiceImpl implements IBookLendingService{
 				book.setDateOfLoan(date);
 				book.setDateOfLoan(date);
 				// add Book to List of Books out
-				namesOfBooksOut.add(null);
+				BooksOut.add(book);
 				
 				if (noOfBooksOut>=3) {
 					System.out.println("Limit reached, no additional book loan possible!");	
 				}
 			}
 		}	
-		System.out.println("bookCheckOut()-ServiceImpl_service method was called - log19b");
+		logger.info("bookCheckOut()-ServiceImpl_service method was called - log19b");
 		return noOfBooksOut;
 		
 	}
@@ -78,14 +92,14 @@ public class BookLendingServiceImpl implements IBookLendingService{
 
 	@Override
 	public List<Books> namesOfBooksOut() {
-		System.out.println("namesOfBooksOut()-ServiceImpl_service method was called - log20");
+		logger.info("namesOfBooksOut()-ServiceImpl_service method was called - log20");
 		return (List<Books>) repoBooks.findAll();
 	}
 
 	@Override
 	public List<Books> getBooks(Long bookId) {
 		Optional<Books> optional = repoBooks.findById(bookId);
-		System.out.println("getBooks()-ServiceImpl_service method was called - log21");
+		logger.info("getBooks()-ServiceImpl_service method was called - log21");
 		return (List<Books>) optional.get();		
 		
 	}
@@ -94,15 +108,14 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	@Override
 	public void safeBookToCatalouge(Books book) {
 	repoBooks.save(book);
-	System.out.println("safeBookToCatalougue()-ServiceImpl_service method was called - log22");
-		
+	logger.info("safeBookToCatalougue()-ServiceImpl_service method was called - log22");
 	}
 
 
 	@Override
-	public List<Books> displayCatalogue() {
-		catalogue=(List<Books>)repoBooks.findAll();	
-		System.out.println("displayCatalogue()-ServiceImpl_service method was called - log23");
+	public Catalouge displayCatalogue() {
+		logger.info("displayCatalogue()-ServiceImpl_service method was called - log23");
+		catalogue=(Catalouge)repoBooks.findAll();		
 		return catalogue;
 	}
 
@@ -110,7 +123,8 @@ public class BookLendingServiceImpl implements IBookLendingService{
 	@Override
 	public void deletBookById(Long id) {
 		repoBooks.deleteById(id);
-		System.out.println("deleteBooksById()-ServiceImpl_service method was called - log24");
+		logger.info("deleteBooksById()-ServiceImpl_service method was called - log24");
+		System.out.println("The book with the following id" + id + "was deleted from the current list.");
 	}
 
 

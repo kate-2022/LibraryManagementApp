@@ -17,12 +17,12 @@ public class Authorities {
 	private String lastName;             
 	private String authority;
 	
-	@OneToOne
-	@MapsId
-	private Student student;
-	
-	@OneToOne
-	@MapsId
-	private Librarian librarian;
+//	@OneToOne
+//	@MapsId
+//	private Student student;
+//	
+//	@OneToOne
+//	@MapsId
+//	private Librarian librarian;
 
 }
