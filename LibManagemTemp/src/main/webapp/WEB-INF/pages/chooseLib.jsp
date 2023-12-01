@@ -24,14 +24,14 @@
 				<br><br>
 						<input type='button' value='Safe Book '
 					onclick="window.location.href='./safe';"/>
-			    <br><br><br><br>
+			    <br><br><hr/><br><br>
 			    
 				<input type='button' value='Book CheckOut'
 					onclick="window.location.href='/LibManagement/book/lend';"/>
 				<br><br>		
 				<input type='button' value='Book Return'
 					onclick="window.location.href='/LibManagement/book/bookBack';"/>
-			    	    <br><br><br><br>
+			    	    <br><br><hr/><br><br>
 			    	    
 			    	<input type='button' value='Back to Home'
 					onclick="window.location.href='./home';"/>

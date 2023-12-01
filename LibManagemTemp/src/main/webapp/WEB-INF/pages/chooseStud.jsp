@@ -28,9 +28,7 @@
 					
 				<input type='button' value='Book Return'
 					onclick="window.location.href='/LibManagement/book/bookBack';"/>
-			
-	
-			    <br><br><br>
+			    <br><br><hr><br>
 			    	<input type='button' value='Back to Home'
 					onclick="window.location.href='./home';"/>
 
